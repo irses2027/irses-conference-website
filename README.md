@@ -6,8 +6,7 @@ This is the Phase 1 starter website for a professor's academic conference websit
 
 - A responsive conference homepage inspired by academic IEEE-style conference sites.
 - Editable conference data in `src/data/conference.js`.
-- DA-IICT entrance image in `assets/daiict-entrance.png`.
-- Attached brochure PDF in `assets/IRSES_2027.pdf`.
+- DAU entrance image in `assets/daiict-entrance.png`.
 - Sections for overview, important dates, tracks, committees, registration, venue, and contact.
 
 ## How to preview

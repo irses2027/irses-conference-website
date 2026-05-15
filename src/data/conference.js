@@ -1,11 +1,11 @@
 export const conference = {
   shortName: "IRSES 2027",
   title: "International Research Symposium on Emerging Systems 2027",
-  label: "Proposed academic conference website",
+  label: "IRSES 2027",
   theme: "Emerging technologies, resilient systems, and intelligent innovation",
   dates: "Dates to be announced",
-  venue: "Dhirubhai Ambani Institute of Information and Communication Technology, Gandhinagar",
-  host: "DA-IICT",
+  venue: "Dhirubhai Ambani University, Gandhinagar, formerly known as DAIICT",
+  host: "DAU",
   description:
     "IRSES 2027 is a placeholder conference website prepared for the planning phase. It is designed for an academic audience and can support paper submissions, technical tracks, committees, speakers, registration, venue details, and sponsor information.",
   purpose:
@@ -89,9 +89,9 @@ export const conference = {
     },
   ],
   venueDetails: {
-    title: "DA-IICT, Gandhinagar",
+    title: "DAU, Gandhinagar",
     description:
-      "The venue section currently uses the DA-IICT entrance image supplied for the project. Travel details, nearby accommodation, campus map, and local transport guidance can be added after confirmation.",
+      "The venue section currently uses the DAU campus entrance image supplied for the project. Travel details, nearby accommodation, campus map, and local transport guidance can be added after confirmation.",
   },
   contact: [
     {
@@ -104,7 +104,7 @@ export const conference = {
     },
     {
       label: "Institute",
-      value: "DA-IICT, Gandhinagar, Gujarat",
+      value: "Dhirubhai Ambani University, Gandhinagar, Gujarat",
     },
   ],
 };
