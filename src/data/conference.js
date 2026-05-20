@@ -215,16 +215,59 @@ export const conference = {
     }
   ],
   registrationNote: "",
+  //
   registrationFees: [
-    { group: "IEEE Member", category: "Indian participant - IEEE student member", earlyBird: "TBA", late: "TBA" },
-    { group: "IEEE Member", category: "Indian participant - IEEE member", earlyBird: "TBA", late: "TBA" },
-    { group: "IEEE Member", category: "Foreign participant - IEEE student member", earlyBird: "TBA", late: "TBA" },
-    { group: "IEEE Member", category: "Foreign participant - IEEE member", earlyBird: "TBA", late: "TBA" },
-    { group: "Non-IEEE Member", category: "Indian participant - non-IEEE student member", earlyBird: "TBA", late: "TBA" },
-    { group: "Non-IEEE Member", category: "Indian participant - non-IEEE member", earlyBird: "TBA", late: "TBA" },
-    { group: "Non-IEEE Member", category: "Foreign participant - non-IEEE student member", earlyBird: "TBA", late: "TBA" },
-    { group: "Non-IEEE Member", category: "Foreign participant - non-IEEE member", earlyBird: "TBA", late: "TBA" },
+    {
+      group: "IEEE Member",
+      category: "Indian participant - IEEE student member",
+      earlyBird: "₹6,000",
+      late: "₹7,000"
+    },
+    {
+      group: "IEEE Member",
+      category: "Indian participant - IEEE member",
+      earlyBird: "₹9,000",
+      late: "₹11,000"
+    },
+    {
+      group: "IEEE Member",
+      category: "Foreign participant - IEEE student member",
+      earlyBird: "$200",
+      late: "$300"
+    },
+    {
+      group: "IEEE Member",
+      category: "Foreign participant - IEEE member",
+      earlyBird: "$300",
+      late: "$400"
+    },
+
+    {
+      group: "Non-IEEE Member",
+      category: "Indian participant - non-IEEE student member",
+      earlyBird: "₹7,000",
+      late: "₹8,500"
+    },
+    {
+      group: "Non-IEEE Member",
+      category: "Indian participant - non-IEEE member",
+      earlyBird: "₹10,000",
+      late: "₹12,000"
+    },
+    {
+      group: "Non-IEEE Member",
+      category: "Foreign participant - non-IEEE student member",
+      earlyBird: "$250",
+      late: "$400"
+    },
+    {
+      group: "Non-IEEE Member",
+      category: "Foreign participant - non-IEEE member",
+      earlyBird: "$350",
+      late: "$500"
+    }
   ],
+  //
   registrationGuidelines: {
     authors: [
       "At least one author of every accepted paper must register and present the paper for inclusion in the conference proceedings.",
@@ -247,8 +290,16 @@ export const conference = {
   },
   contact: [
     {
+      label: "Organising Secretary",
+      value: "Dr. Umang Patel",
+    },
+    {
       label: "Conference Email",
-      value: "To be announced",
+      value: "ieee_irses@dau.ac.in",
+    },
+    {
+      label: "Phone",
+      value: "07968261595",
     },
     {
       label: "Host Institute",
