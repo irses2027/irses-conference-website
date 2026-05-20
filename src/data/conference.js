@@ -117,7 +117,7 @@ export const conference = {
     {
       title: "Chief Patron",
       members: [
-        { name: "Prof. Tathagata Bandyopadhyay", image: "./assets/faculty/tathagata-bandyopadhyay.jpg" },
+        { name: "Tathagata Bandyopadhyay", image: "./assets/faculty/tathagata-bandyopadhyay.jpg" },
       ],
     },
     {
@@ -215,8 +215,7 @@ export const conference = {
     }
   ],
   registrationNote: "",
-
-  export const registrationFees = [
+  registrationFees: [
     {
       group: "IEEE Member",
       category: "Indian participant - IEEE student member",
@@ -313,7 +312,7 @@ export const conference = {
       earlyBird: "$300",
       lateRegistration: "$450",
     },
-  ];
+  ],
   /*
   registrationFees: [
     {
