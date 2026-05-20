@@ -215,7 +215,7 @@ export const conference = {
     }
   ],
 
-  import React, { useState } from 'react';
+  //import React, { useState } from 'react';
   registrationNote: "",
   registrationFees: [
     {
