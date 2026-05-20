@@ -215,7 +215,106 @@ export const conference = {
     }
   ],
   registrationNote: "",
-  //
+
+  export const registrationFees = [
+    {
+      group: "IEEE Member",
+      category: "Indian participant - IEEE student member",
+      earlyBird: "₹6,000",
+      lateRegistration: "₹7,000",
+    },
+    {
+      group: "IEEE Women Member",
+      category: "Indian participant - IEEE student women member",
+      earlyBird: "₹5,000",
+      lateRegistration: "₹6,000",
+    },
+    {
+      group: "IEEE Member",
+      category: "Indian participant - IEEE member",
+      earlyBird: "₹9,000",
+      lateRegistration: "₹11,000",
+    },
+    {
+      group: "IEEE Women Member",
+      category: "Indian participant - IEEE women member",
+      earlyBird: "₹8,000",
+      lateRegistration: "₹10,000",
+    },
+    {
+      group: "IEEE Member",
+      category: "Foreign participant - IEEE student member",
+      earlyBird: "$200",
+      lateRegistration: "$300",
+    },
+    {
+      group: "IEEE Women Member",
+      category: "Foreign participant - IEEE student women member",
+      earlyBird: "$150",
+      lateRegistration: "$250",
+    },
+    {
+      group: "IEEE Member",
+      category: "Foreign participant - IEEE member",
+      earlyBird: "$300",
+      lateRegistration: "$400",
+    },
+    {
+      group: "IEEE Women Member",
+      category: "Foreign participant - IEEE women member",
+      earlyBird: "$250",
+      lateRegistration: "$350",
+    },
+    {
+      group: "Non-IEEE Member",
+      category: "Indian participant - non-IEEE student member",
+      earlyBird: "₹7,000",
+      lateRegistration: "₹8,500",
+    },
+    {
+      group: "Non-IEEE Women Member",
+      category: "Indian participant - non-IEEE student women member",
+      earlyBird: "₹6,000",
+      lateRegistration: "₹7,500",
+    },
+    {
+      group: "Non-IEEE Member",
+      category: "Indian participant - non-IEEE member",
+      earlyBird: "₹10,000",
+      lateRegistration: "₹12,000",
+    },
+    {
+      group: "Non-IEEE Women Member",
+      category: "Indian participant - non-IEEE women member",
+      earlyBird: "₹9,000",
+      lateRegistration: "₹11,000",
+    },
+    {
+      group: "Non-IEEE Member",
+      category: "Foreign participant - non-IEEE student member",
+      earlyBird: "$250",
+      lateRegistration: "$400",
+    },
+    {
+      group: "Non-IEEE Women Member",
+      category: "Foreign participant - non-IEEE women student member",
+      earlyBird: "$200",
+      lateRegistration: "$350",
+    },
+    {
+      group: "Non-IEEE Member",
+      category: "Foreign participant - non-IEEE member",
+      earlyBird: "$350",
+      lateRegistration: "$500",
+    },
+    {
+      group: "Non-IEEE Women Member",
+      category: "Foreign participant - non-IEEE woman member",
+      earlyBird: "$300",
+      lateRegistration: "$450",
+    },
+  ];
+  /*
   registrationFees: [
     {
       group: "IEEE Member",
@@ -267,7 +366,7 @@ export const conference = {
       late: "$500"
     }
   ],
-  //
+  */
   registrationGuidelines: {
     authors: [
       "At least one author of every accepted paper must register and present the paper for inclusion in the conference proceedings.",
