@@ -618,53 +618,78 @@ export const conference = {
         title: "Title Sponsors",
         amount: "Rs. 10,00,000/- + GST (18%)",
         details: [
-          "Special mention as Presented by, inclusion in PR activities, inaugural ceremony presence, a 10-minute presentation slot, social media mentions, main-stage panel visibility, and podium acknowledgement.",
-          "Sponsor name and logo will appear in conference announcement materials and documents, including banners, posters, and proceedings. Please provide a high-resolution JPG logo at the time of contract.",
-          "Space up to 5m x 5m will be provided at a strategic location in the venue to showcase products. Ten complimentary registrations will be provided.",
+          "Featured as the “Presented By” sponsor with visibility across PR campaigns, inaugural ceremony, social media promotions, main-stage acknowledgements, and a dedicated 10-minute presentation slot.",
+         // "Special mention as Presented by, inclusion in PR activities, inaugural ceremony presence, a 10-minute presentation slot, social media mentions, main-stage panel visibility, and podium acknowledgement.",
+         
+         "Sponsor name and logo will be prominently displayed across conference branding materials, including banners, posters, announcements, and proceedings. A high-resolution JPG logo must be submitted at the time of confirmation." ,
+         //"Sponsor name and logo will appear in conference announcement materials and documents, including banners, posters, and proceedings. Please provide a high-resolution JPG logo at the time of contract.",
+         
+         "A premium exhibition space of up to 5m × 5m will be allocated at the venue for product display and networking, along with ten complimentary delegate registrations.", 
+         //"Space up to 5m x 5m will be provided at a strategic location in the venue to showcase products. Ten complimentary registrations will be provided.",
         ],
       },
       {
         title: "Platinum Sponsors",
         amount: "Rs. 5,00,000/- + GST (18%)",
         details: [
-          "Main-stage panel visibility, podium acknowledgement, inaugural ceremony presence, gala dinner invite, social media mentions, and inclusion in PR activity.",
-          "Sponsor name and logo will appear in conference announcement materials and documents, including banners, posters, and proceedings. Please provide a high-resolution JPG logo at the time of contract.",
-          "Space up to 4m x 4m will be provided at a strategic venue location to showcase products. Sponsors will be acknowledged during the inaugural welcome or closing event. Five complimentary registrations will be provided.",
+          "Sponsor recognition through main-stage visibility, podium acknowledgements, inaugural ceremony presence, gala dinner invitations, social media promotions, and conference PR activities.",
+          //"Main-stage panel visibility, podium acknowledgement, inaugural ceremony presence, gala dinner invite, social media mentions, and inclusion in PR activity.",
+          
+          "Sponsor name and logo will be featured across official conference materials, including banners, posters, announcements, and proceedings. A high-resolution JPG logo must be provided upon confirmation.",
+          //"Sponsor name and logo will appear in conference announcement materials and documents, including banners, posters, and proceedings. Please provide a high-resolution JPG logo at the time of contract.",
+          
+          "A dedicated 4m × 4m exhibition space will be allocated at a prime venue location for product showcase and engagement. Sponsors will also be acknowledged during the inaugural or closing ceremony, along with five complimentary delegate registrations.",
+          //"Space up to 4m x 4m will be provided at a strategic venue location to showcase products. Sponsors will be acknowledged during the inaugural welcome or closing event. Five complimentary registrations will be provided.",
         ],
       },
       {
         title: "Gold Sponsors",
         amount: "Rs. 3,00,000/- + GST (18%)",
         details: [
-          "Sponsor name and logo will appear in conference announcement materials, including banners and posters.",
-          "Space up to 4m x 4m will be provided at the exhibition venue to showcase products. Sponsors will be acknowledged during the inaugural welcome or closing event.",
-          "Three complimentary registrations will be provided.",
+          "Sponsor name and logo will be displayed across official conference promotional materials, including banners and posters.",
+          //"Sponsor name and logo will appear in conference announcement materials, including banners and posters.",
+          
+          "A dedicated 4m × 4m exhibition space will be provided at the venue for product showcasing and networking. Sponsors will also receive acknowledgement during the inaugural or closing ceremony.",
+          //"Space up to 4m x 4m will be provided at the exhibition venue to showcase products. Sponsors will be acknowledged during the inaugural welcome or closing event.",
+          
+          "Three complimentary delegate registrations will be included.",
+          //"Three complimentary registrations will be provided.",
         ],
       },
       {
         title: "Silver Sponsors",
         amount: "Rs. 2,00,000/- + GST (18%)",
         details: [
-          "Sponsor name will be displayed in the event banner of the conference.",
-          "Space up to 3m x 3m will be provided at the exhibition venue to showcase products.",
-          "Two complimentary registrations will be provided.",
+          "Sponsor name will be featured on the official conference event banner.",
+          //"Sponsor name will be displayed in the event banner of the conference.",
+
+          "A dedicated 3m × 3m exhibition space will be allocated at the venue for product display and engagement.",
+          //"Space up to 3m x 3m will be provided at the exhibition venue to showcase products.",
+          
+          "Two complimentary delegate registrations will be included.",
+        //  "Two complimentary registrations will be provided.",
         ],
       },
       {
         title: "Academic Partners",
         amount: "Rs. 2,00,000/- + GST (18%)",
         details: [
-          "This option is open to academic institutions, colleges, and universities where IEEE Student Branches exist.",
+          /*"This option is open to academic institutions, colleges, and universities where IEEE Student Branches exist.",
           "Partner name will be displayed in the event banner, and space up to 3m x 3m will be provided at the exhibition venue to showcase activities and innovations.",
-          "Two complimentary registrations will be provided.",
+          "Two complimentary registrations will be provided.",*/
+          "This partnership category is exclusively available to academic institutions, colleges, and universities with active IEEE Student Branches.",
+          "Partner name will be featured on the official conference event banner, along with a dedicated 3m × 3m exhibition space to showcase institutional activities, research, and innovations.",
+          "Two complimentary delegate registrations will be included.",
         ],
       },
       {
         title: "Exhibitors",
         amount: "Rs. 50,000/- + GST (18%)",
         details: [
-          "Exhibitors will be provided space at the exhibition venue to showcase activities and innovations.",
-          "One complimentary registration will be provided.",
+          /*"Exhibitors will be provided space at the exhibition venue to showcase activities and innovations.",
+          "One complimentary registration will be provided.",*/
+          "Exhibitors will be provided with dedicated space at the venue to showcase their activities, products, and innovations.",
+          "One complimentary delegate registration will be included.",
         ],
       },
     ],
