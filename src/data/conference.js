@@ -222,6 +222,13 @@ export const conference = {
           infoLink: "https://ieeegujaratsection.org/executive-committee/",
           bio: "Electrical engineering academic at Marwadi University and IEEE Gujarat Section volunteer with interests in power systems, electrical machines, and engineering education.",
         },
+         {
+          name: "Naran M. Pindoriya",
+          institute: "IIT Gandhinagar",
+          image: "./assets/faculty/Naram-M-Pindoriya.jpg",
+          infoLink: "https://iitgn.ac.in/faculty/ee/fac-naran",
+          //bio: "Electrical engineering academic at Marwadi University and IEEE Gujarat Section volunteer with interests in power systems, electrical machines, and engineering education.",
+        },
       ],
     },
     {
@@ -477,112 +484,6 @@ export const conference = {
       ],
     },
   ],
-  /*
-  committees: [
-    {
-      title: "Chief Patron",
-      members: [
-        { name: "Tathagata Bandyopadhyay", image: "./assets/faculty/tathagata-bandyopadhyay.jpg" },
-      ],
-    },
-    {
-      title: "Patron",
-      members: [
-        { name: "Prof. G. Venkatesh", image: "./assets/faculty/g-venkatesh.jpg" },
-      ],
-    },
-    {
-      title: "Oversight Committee",
-      members: [
-        { name: "Prof. Bhaskar Chaudhary", image: "./assets/faculty/bhaskar-chaudhary.jpg" },
-        { name: "Prof. Yash Vasawada", image: "./assets/faculty/yash-vasawada.jpg" },
-        { name: "Prof. Maniklal das", image: "./assets/faculty/maniklal-das.jpg" },
-      ],
-    },
-    {
-      title: "General Chairs",
-      members: [
-        { name: "Prof. Pankaj Kumar", image: "./assets/faculty/pankaj-kumar.jpg" },
-        { name: "Prof. Yash Agarwal", image: "./assets/faculty/yash-agarwal.jpg" },
-        { name: "Prof. Chirag Paunwala ", image: "./assets/faculty/chirag-paunwala.jpg" },
-      ],
-    },
-    {
-      title: "TPC Chairs",
-      members: [
-        { name: "Prof. Sanjay Srivastava", image: "./assets/faculty/sanjay-srivastava.jpg" },
-        { name: "Prof. Anish Mathuria", image: "./assets/faculty/anish-mathuria.jpg" },
-        { name: "Prof. Biswajit Mishra", image: "./assets/faculty/biswajit-mishra.jpg" },
-        { name: "Prof. Amit Ved", image: "./assets/faculty/Amit-Ved.jpg" },
-      ],
-    },
-    {
-      title: "Publication Chair",
-      members: [
-        { name: "Prof. Manish Kumar", image: "./assets/faculty/manish-kumar.jpg" },
-        { name: "Prof. Pritam Anand", image: "./assets/faculty/pritam-anand.jpg" },
-        { name: "Prof. Arpit Rana", image: "./assets/faculty/arpit-rana.jpg" },
-        { name: "Prof. Kalyan Sasidhar", image: "./assets/faculty/Kalyan-Sasidhar.jpg" },
-      ],
-    },
-    {
-      title: "Finance Chair",
-      members: [
-        { name: "Prof. Mukesh Tiwari", image: "./assets/faculty/mukesh-tiwari.jpg" },
-        { name: "Prof. Sunitha V.", image: "./assets/faculty/Sunitha-V.jpg" },
-        { name: "Prof. Saurabh Tiwari", image: "./assets/faculty/Saurabh-Tiwari.jpg" },
-
-      ],
-    },
-    {
-      title: "Website and Social Media Chair",
-      members: [
-        { name: "Prof. Sujay Kadam", image: "./assets/faculty/sujay-kadam.jpg" },
-        { name: "Prof. Anupam Rana", image: "./assets/faculty/anupam-rana.jpg" },
-      ],
-    },
-    {
-      title: "PhD Colloquium Chair",
-      members: [
-        { name: "Prof. Sreeja Rajendran", image: "./assets/faculty/sreeja-rajendran.jpg" },
-        { name: "Prof. Rutu Parekh", image: "./assets/faculty/rutu-parekh.jpg" },
-      ],
-    },
-    {
-      title: "Student Innovation Chair",
-      members: [
-        { name: "Prof. Koushlendra Singh", image: "./assets/faculty/koushlendra-singh.jpg" },
-        { name: "Prof. Tapas kumar maiti", image: "./assets/faculty/Tapas-kumar-maiti.jpg" },
-      ],
-    },
-    {
-      title: "Industry Track Chair",
-      members: [
-        { name: "Dr. Prasenjit Kundu", image: "./assets/faculty/prasenjit-kundu.jpg" },
-        { name: "Prof. Ankit Vijayvargiya", image: "./assets/faculty/ankit-vijayvargiya.jpg" },
-        { name: "Prof. Madhukant Sharma", image: "./assets/faculty/madhukant-sharma.jpg" },
-        { name: " Prof. Amit Mankodi", image: "./assets/faculty/amit-mankodi.jpg" },
-      ],
-    },
-    {
-      title: "International Liaison Chairs",
-      members: [
-        { name: "Prof. Abhishek Jindal", image: "./assets/faculty/abhishek-jindal.jpg" },
-        { name: "Prof. Ajay Beniwal", image: "./assets/faculty/ajay-beniwal.jpg" },
-      ],
-    },
-    {
-      title: "Women in Engineering Chairs",
-      members: [
-        { name: "Prof. Minal Bhise", image: "./assets/faculty/Minal-Bhise.jpg" },
-        { name: "Prof. Sangeeta Singh", image: "./assets/faculty/sangeeta-singh.jpg" },
-      ]
-    }
-  ],
-
-  */
-
-  //import React, { useState } from 'react';
   registrationNote: "",
   registrationFees: [
     {
@@ -682,59 +583,6 @@ export const conference = {
       late: "$450",
     },
   ],
-  /*
-  registrationFees: [
-    {
-      group: "IEEE Member",
-      category: "Indian participant - IEEE student member",
-      earlyBird: "₹6,000",
-      late: "₹7,000"
-    },
-    {
-      group: "IEEE Member",
-      category: "Indian participant - IEEE member",
-      earlyBird: "₹9,000",
-      late: "₹11,000"
-    },
-    {
-      group: "IEEE Member",
-      category: "Foreign participant - IEEE student member",
-      earlyBird: "$200",
-      late: "$300"
-    },
-    {
-      group: "IEEE Member",
-      category: "Foreign participant - IEEE member",
-      earlyBird: "$300",
-      late: "$400"
-    },
-
-    {
-      group: "Non-IEEE Member",
-      category: "Indian participant - non-IEEE student member",
-      earlyBird: "₹7,000",
-      late: "₹8,500"
-    },
-    {
-      group: "Non-IEEE Member",
-      category: "Indian participant - non-IEEE member",
-      earlyBird: "₹10,000",
-      late: "₹12,000"
-    },
-    {
-      group: "Non-IEEE Member",
-      category: "Foreign participant - non-IEEE student member",
-      earlyBird: "$250",
-      late: "$400"
-    },
-    {
-      group: "Non-IEEE Member",
-      category: "Foreign participant - non-IEEE member",
-      earlyBird: "$350",
-      late: "$500"
-    }
-  ],
-  */
   registrationGuidelines: {
     authors: [
       "At least one author of every accepted paper must register and present the paper for inclusion in the conference proceedings.",

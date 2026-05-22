@@ -340,11 +340,11 @@ attendeeNotes.innerHTML = conference.registrationGuidelines.attendees
 
 /* ─── Contact ──────────────────────────────────────────────────────────────── */
 const contactIcons = {
-  "Organising Secretary": "👤",
-  "Conference Email":     "✉️",
-  "Phone":                "📞",
-  "Host Institute":       "🏛️",
-  "Location":             "📍",
+  "Organising Secretary": "",
+  "Conference Email":     "",
+  "Phone":                "",
+  "Host Institute":       "",
+  "Location":             "",
 };
 
 const contact = document.querySelector("[data-contact]");
