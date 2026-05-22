@@ -222,9 +222,9 @@ export const conference = {
           infoLink: "https://ieeegujaratsection.org/executive-committee/",
           bio: "Electrical engineering academic at Marwadi University and IEEE Gujarat Section volunteer with interests in power systems, electrical machines, and engineering education.",
         },
-         {
+        {
           name: "Naran M. Pindoriya",
-          institute: "IIT Gandhinagar",
+          institute: "Indian Institute of Technology Gandhinagar",
           image: "./assets/faculty/Naran-M-Pindoriya.jpg",
           infoLink: "https://iitgn.ac.in/faculty/ee/fac-naran",
           //bio: "Electrical engineering academic at Marwadi University and IEEE Gujarat Section volunteer with interests in power systems, electrical machines, and engineering education.",
