@@ -113,6 +113,143 @@ export const conference = {
       ],
     },
   ],
+
+  committees: [
+  {
+    title: "Chief Patron",
+    members: [
+      { name: "Tathagata Bandyopadhyay", image: "./assets/faculty/tathagata-bandyopadhyay.jpg" },
+    ],
+  },
+  {
+    title: "Patron",
+    members: [
+      { name: "G. Venkatesh", image: "./assets/faculty/g-venkatesh.jpg" },
+    ],
+  },
+  {
+    title: "Oversight Committee",
+    members: [
+      { name: "Bhaskar Chaudhary", image: "./assets/faculty/bhaskar-chaudhary.jpg" },
+      { name: "Yash Vasawada", image: "./assets/faculty/yash-vasawada.jpg" },
+      { name: "Manik Lal Das", image: "./assets/faculty/maniklal-das.jpg" },
+    ],
+  },
+  {
+    title: "General Chairs",
+    members: [
+      { name: "Pankaj Kumar", image: "./assets/faculty/pankaj-kumar.jpg" },
+      { name: "Yash Agarwal", image: "./assets/faculty/yash-agarwal.jpg" },
+      { name: "Chirag Paunwala", image: "./assets/faculty/chirag-paunwala.jpg" },
+    ],
+  },
+  {
+    title: "TPC Chairs",
+    members: [
+      { name: "Sanjay Srivastava", image: "./assets/faculty/sanjay-srivastava.jpg" },
+      { name: "Anish Mathuria", image: "./assets/faculty/anish-mathuria.jpg" },
+      { name: "Biswajit Mishra", image: "./assets/faculty/biswajit-mishra.jpg" },
+      { name: "Amit Ved", image: "./assets/faculty/Amit-Ved.jpg" },
+    ],
+  },
+  {
+    title: "Publication Chair",
+    members: [
+      { name: "Jawar Singh", image: "./assets/faculty/jawar-singh.jpg" },
+      { name: "Somak Bhattacharyya", image: "./assets/faculty/somak-bhattacharyya.jpg" },
+      { name: "Manish Kumar", image: "./assets/faculty/manish-kumar.jpg" },
+    ],
+  },
+  {
+    title: "Finance Chair",
+    members: [
+      { name: "Mukesh Tiwari", image: "./assets/faculty/mukesh-tiwari.jpg" },
+      { name: "Sunita V", image: "./assets/faculty/Sunitha-V.jpg" },
+      { name: "Manisha Shah", image: "./assets/faculty/manisha-shah.jpg" },
+    ],
+  },
+  {
+    title: "Website & Social Media Chair",
+    members: [
+      { name: "Sujay Kadam", image: "./assets/faculty/sujay-kadam.jpg" },
+      { name: "Anupam Rana", image: "./assets/faculty/anupam-rana.jpg" },
+    ],
+  },
+  {
+    title: "PhD Colloquium Chair",
+    members: [
+      { name: "Rutu Parekh", image: "./assets/faculty/rutu-parekh.jpg" },
+    ],
+  },
+  {
+    title: "Student Innovation Chair",
+    members: [
+      { name: "Koushlendra Singh", image: "./assets/faculty/koushlendra-singh.jpg" },
+      { name: "Tapas Kumar Maiti", image: "./assets/faculty/Tapas-kumar-maiti.jpg" },
+    ],
+  },
+  {
+    title: "Industry Track Chair",
+    members: [
+      { name: "Ankit Vijayvargiya", image: "./assets/faculty/ankit-vijayvargiya.jpg" },
+      { name: "Amit Mankodi", image: "./assets/faculty/amit-mankodi.jpg" },
+    ],
+  },
+  {
+    title: "International Liaison Chairs",
+    members: [
+      { name: "Abhishek Jindal", image: "./assets/faculty/abhishek-jindal.jpg" },
+      { name: "Ajay Beniwal", image: "./assets/faculty/ajay-beniwal.jpg" },
+    ],
+  },
+  {
+    title: "Women in Engineering Chairs",
+    members: [
+      { name: "Minal Bhise", image: "./assets/faculty/Minal-Bhise.jpg" },
+      { name: "Sangeeta Singh", image: "./assets/faculty/sangeeta-singh.jpg" },
+    ],
+  },
+  {
+    title: "Tutorial and Special Session Chairs",
+    members: [
+      { name: "Pritam Anand", image: "./assets/faculty/pritam-anand.jpg" },
+      { name: "Arpit Rana", image: "./assets/faculty/arpit-rana.jpg" },
+    ],
+  },
+  {
+    title: "Local Arrangement Chairs",
+    members: [
+      { name: "Madhukant Sharma", image: "./assets/faculty/madhukant-sharma.jpg" },
+      { name: "Pushpendra Kumar", image: "./assets/faculty/pushpendra-kumar.jpg" },
+    ],
+  },
+  {
+    title: "Publicity Chairs",
+    members: [
+      { name: "Prasenjit Kundu", image: "./assets/faculty/prasenjit-kundu.jpg" },
+    ],
+  },
+  {
+    title: "Registration Chairs",
+    members: [
+      { name: "Purbasha Das", image: "./assets/faculty/purbasha-das.jpg" },
+      { name: "Sreeja Rajendran", image: "./assets/faculty/sreeja-rajendran.jpg" },
+    ],
+  },
+  {
+    title: "Technical Track Chairs",
+    members: [
+      { name: "Kalyan Sasidhar", image: "./assets/faculty/Kalyan-Sasidhar.jpg" },
+    ],
+  },
+  {
+    title: "Sponsor Committee Chairs",
+    members: [
+      { name: "Saurabh Tiwari", image: "./assets/faculty/Saurabh-Tiwari.jpg" },
+    ],
+  }
+],
+  /*
   committees: [
     {
       title: "Chief Patron",
@@ -214,6 +351,8 @@ export const conference = {
       ]
     }
   ],
+
+  */
 
   //import React, { useState } from 'react';
   registrationNote: "",
