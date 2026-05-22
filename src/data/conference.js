@@ -123,7 +123,7 @@ export const conference = {
         name: "Tathagata Bandyopadhyay",
         institute: "Dhirubhai Ambani University, Gandhinagar",
         image: "./assets/faculty/tathagata-bandyopadhyay.jpg",
-        infoLink: "https://daiict.ac.in",
+        infoLink: "https://www.daiict.ac.in/faculty/tathagata-bandyopadhyay",
         bio: "Director General at Dhirubhai Ambani University with expertise in academic leadership, statistics, and higher education administration."
        }
     ],
