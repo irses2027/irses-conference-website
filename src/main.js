@@ -72,12 +72,14 @@ const tracks = document.querySelector("[data-tracks]");
 tracks.innerHTML = conference.tracks
   .map(
     (track, index) => `
-    <article class="track-card" data-index="${String(index + 1).padStart(2, "0")}">
-      <span>${String(index + 1).padStart(2, "0")}</span>
-      <h3>${track.title}</h3>
-      <ul>
-        ${track.scope.map((item) => `<li>${item}</li>`).join("")}
-      </ul>
+    <article class="track-card">
+      <span class="track-number">${String(index + 1).padStart(2, "0")}</span>
+      <div class="track-content">
+        <h3>${track.title}</h3>
+        <ul>
+          ${track.scope.map((item) => `<li>${item}</li>`).join("")}
+        </ul>
+      </div>
     </article>
   `,
   )
