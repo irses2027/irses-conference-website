@@ -125,7 +125,7 @@ export const conference = {
         image: "./assets/faculty/tathagata-bandyopadhyay.jpg",
         infoLink: "https://www.daiict.ac.in/faculty/tathagata-bandyopadhyay",
         bio: "Director General at Dhirubhai Ambani University with expertise in academic leadership, statistics, and higher education administration."
-       }
+       },
     ],
   },
   {
