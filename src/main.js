@@ -520,84 +520,45 @@ const navItems = [
 ];
 
 let activeSection = "";
-const sections = navItems.map(id => document.getElementById(id)).filter(Boolean);
+let activeSection = "";
+
+const sections = navItems
+  .map((id) => document.getElementById(id))
+  .filter(Boolean);
+
 const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
-/*
-const setActiveSection = (id) => {
-  if (activeSection === id) return;
-  activeSection = id;
-  
-  navLinks.forEach((link) => {
-    link.classList.toggle(
-      "is-active",
-      link.getAttribute("href") === `#${id}`
-    );
-  });
-};*/
 
 const setActiveSection = (id) => {
-  if (id === "authors") {
-    const authorsSection = document.getElementById("authors");
-
-    if (authorsSection) {
-      const rect = authorsSection.getBoundingClientRect();
-
-      // activate earlier
-      if (rect.top > window.innerHeight * 0.45) {
-        return;
-      }
-    }
-  }
-
   if (activeSection === id) return;
 
   activeSection = id;
 
   navLinks.forEach((link) => {
-    link.classList.toggle(
-      "is-active",
-      link.getAttribute("href") === `#${id}`
-    );
+    const isActive = link.getAttribute("href") === `#${id}`;
+
+    link.classList.toggle("is-active", isActive);
   });
 };
 
 const updateActiveSection = () => {
-  let currentSection = "";
+  const scrollPosition = window.scrollY + 180;
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
 
     if (
-      window.scrollY >= sectionTop - 140 &&
-      window.scrollY < sectionTop + sectionHeight - 140
+      scrollPosition >= top &&
+      scrollPosition < top + height
     ) {
-      currentSection = section.id;
+      setActiveSection(section.id);
     }
   });
-
-  if (currentSection) {
-    setActiveSection(currentSection);
-  }
 };
 
 window.addEventListener("scroll", updateActiveSection);
 
 updateActiveSection();
-
-/*
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveSection(entry.target.id);
-      }
-    });
-  },
-  { threshold: 0.1, rootMargin: "-120px 0px -55% 0px" }
-);*/
-
-sections.forEach((section) => navObserver.observe(section));
 
 /* ─── Dark mode toggle ─────────────────────────────────────────────────────── */
 const MOON_SVG = `
