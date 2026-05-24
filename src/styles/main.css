@@ -251,14 +251,15 @@ img { display: block; max-width: 100%; }
 .site-nav a::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0px;
-  width: 100%;
+  width: calc(100% - 8px);
   height: 2px;
   background: var(--navy);
-  transform: scaleX(0);
-  transform-origin: right;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
   transition: transform 260ms ease;
+  border-radius: 999px;
 }
 
 .site-header.is-scrolled .site-nav a::after {
@@ -281,8 +282,10 @@ img { display: block; max-width: 100%; }
 
 .site-nav a:hover::after,
 .site-nav a.is-active::after { 
-  transform: scaleX(1); 
-  transform-origin: left;
+  /*transform: scaleX(1); 
+  transform-origin: left;*/
+
+  transform: translateX(-50%) scaleX(1);
 }
 
 .nav-cta {
