@@ -114,6 +114,164 @@ export const conference = {
     },
   ],
 
+  authorGuidelines: {
+    eyebrow: "For Authors",
+    title: "Submission Guidelines",
+    intro:
+      "IRSES 2027 welcomes original, unpublished research contributions aligned with intelligent, resilient, and sustainable energy systems. Authors must prepare manuscripts in IEEE conference format and complete all submission, registration, compliance, and presentation requirements within the announced deadlines.",
+    actions: [
+      {
+        label: "IEEE Manuscript Templates",
+        href: "https://www.ieee.org/conferences/publishing/templates.html",
+        style: "primary",
+      },
+      {
+        label: "IEEE Submission Policies",
+        href: "https://conferences.ieeeauthorcenter.ieee.org/author-ethics/guidelines-and-policies/submission-policies/",
+        style: "secondary",
+      },
+    ],
+    essentials: [
+      { label: "Format", value: "IEEE two-column conference template" },
+      { label: "Length", value: "Maximum 6 pages" },
+      { label: "Upload", value: "PDF only through Microsoft CMT" },
+      { label: "Final upload", value: "Author registration required first" },
+    ],
+    sections: [
+      {
+        id: "submission-guidelines",
+        title: "Submission Guidelines",
+        label: "Initial Submission",
+        description:
+          "Authors should submit full-length manuscripts through the IRSES 2027 Microsoft CMT submission portal once it is opened by the committee.",
+        items: [
+          "Submissions must describe original work that has not been published and is not under review for another conference, journal, or proceedings venue.",
+          "Only PDF files will be accepted for review. Source files should be retained by the authors and submitted only if requested during the final publication process.",
+          "The paper should clearly state the research objective, technical contribution, methodology, results, and relevance to the conference themes.",
+          "All manuscripts will undergo peer review by the Technical Program Committee or assigned expert reviewers.",
+          "Review decisions, revision requests, and final submission instructions will be communicated through the conference submission system and official email channels.",
+        ],
+      },
+      {
+        id: "manuscript-formatting",
+        title: "Manuscript Formatting Instructions",
+        label: "IEEE Format",
+        description:
+          "Manuscripts must follow the standard IEEE conference paper template so that accepted papers can move smoothly into publication checks.",
+        items: [
+          "Use the IEEE two-column conference format without altering margins, columns, font sizes, or spacing.",
+          "Prepare the manuscript in English and remove all instructional placeholder text from the IEEE template before submission.",
+          "Include the paper title, author names, affiliations, country details, and corresponding author email as required by the template and submission form.",
+          "Do not add page numbers, headers, footers, or security restrictions to the PDF.",
+          "Figures, tables, equations, references, and acknowledgements must remain within the allowed page limit.",
+        ],
+      },
+      {
+        id: "paper-specifications",
+        title: "Paper Specifications",
+        label: "Technical Checks",
+        description:
+          "Papers that do not meet the required specifications may be returned for correction or rejected during screening.",
+        specifications: [
+          { label: "Paper length", value: "Maximum 6 pages, including figures, tables, and references" },
+          { label: "Paper size", value: "US Letter, 8.5 x 11 in" },
+          { label: "File format", value: "PDF (.pdf) only" },
+          { label: "File size", value: "Maximum 2 MB unless the committee announces a revised limit" },
+          { label: "Fonts", value: "All fonts must be embedded; Type 3 fonts should not be used" },
+          { label: "Page numbers", value: "Do not include page numbering" },
+          { label: "Security", value: "Do not password-protect or restrict the PDF file" },
+        ],
+      },
+      {
+        id: "camera-ready-process",
+        title: "Final Camera-Ready Submission Process",
+        label: "Accepted Papers",
+        description:
+          "Every accepted paper must complete a final camera-ready submission, even when the authors do not make changes to the reviewed manuscript.",
+        ordered: true,
+        items: [
+          "Complete the required author registration before attempting the final paper upload.",
+          "Revise the manuscript carefully in response to reviewer comments and committee instructions.",
+          "Prepare the final PDF using the IEEE conference template and verify all paper metadata.",
+          "Check the PDF through the IEEE PDF compliance process once the conference PDF eXpress details are announced.",
+          "Log in to Microsoft CMT with the same account used for the initial submission and upload the final compliant PDF by the deadline.",
+          "Complete any copyright, publication, or author declaration forms requested by the conference.",
+        ],
+      },
+      {
+        id: "pdf-compliance",
+        title: "PDF Compliance Instructions",
+        label: "IEEE PDF Check",
+        description:
+          "Camera-ready papers must satisfy IEEE PDF requirements before they can be considered for conference proceedings submission.",
+        items: [
+          "Use IEEE PDF eXpress or the compliance tool announced by IRSES 2027 to validate the final manuscript.",
+          "Resolve font embedding, unsupported font, margin, image, or PDF-generation errors before uploading the final file.",
+          "Upload only the compliant final PDF to Microsoft CMT; non-compliant files may delay publication processing.",
+          "Do not apply encryption, password protection, editing restrictions, or other security settings to the PDF.",
+          "PDF eXpress conference credentials and detailed instructions will be shared with accepted authors before the camera-ready deadline.",
+        ],
+      },
+      {
+        id: "registration-requirements",
+        title: "Registration Requirements for Authors",
+        label: "Author Registration",
+        description:
+          "Registration is mandatory for accepted papers before the final camera-ready upload and presentation.",
+        items: [
+          "At least one author of each accepted paper must register under an eligible author category by the stated deadline.",
+          "The registration code or confirmation details may be required before the final paper can be uploaded.",
+          "Co-authors attending the conference must complete separate registrations.",
+          "A registered author is expected to present the accepted paper during the assigned conference session.",
+          "Non-presented papers may be excluded from the conference proceedings or post-conference submission to the digital library, subject to the applicable no-show policy.",
+        ],
+      },
+      {
+        id: "plagiarism-ethics",
+        title: "Plagiarism & Ethics Policy",
+        label: "Research Integrity",
+        description:
+          "Authors are responsible for ensuring that the submitted work satisfies IEEE publication ethics and the conference's originality expectations.",
+        items: [
+          "All submissions may be screened for plagiarism, overlap, prior publication, multiple submission, and other publication ethics concerns.",
+          "Text, figures, tables, methods, datasets, code, and ideas taken from other sources must be properly cited.",
+          "Authors must disclose related prior work and clearly explain how the current submission differs from any earlier publication.",
+          "Use of AI-generated or AI-assisted content must follow the latest IEEE author guidance and should be disclosed when required.",
+          "Submissions with unacceptable similarity, improper reuse, or ethical violations may be rejected at any stage.",
+        ],
+      },
+      {
+        id: "ieee-xplore-note",
+        title: "IEEE Xplore Submission Note",
+        label: "Publication Eligibility",
+        description:
+          "Accepted and presented papers will be considered for submission to IEEE Xplore after the conference, subject to IEEE requirements and conference quality checks.",
+        items: [
+          "Acceptance and presentation at IRSES 2027 do not by themselves guarantee publication in IEEE Xplore.",
+          "Only papers that complete peer review, registration, presentation, PDF compliance, copyright, and quality-screening requirements will be processed further.",
+          "The conference organizing committee will conduct post-conference checks before forwarding eligible papers for publication consideration.",
+          "IEEE or its publication partners may require corrections or may exclude papers that do not satisfy publication standards.",
+        ],
+      },
+      {
+        id: "important-notes",
+        title: "Important Notes for Authors",
+        label: "Before Uploading",
+        description:
+          "Please review the following points carefully before submitting either the review manuscript or the final camera-ready version.",
+        items: [
+          "Keep the paper ID and submission account details available for all correspondence.",
+          "Ensure that author names, affiliations, email addresses, and paper title are consistent across the manuscript, CMT metadata, registration, and copyright forms.",
+          "Do not wait until the final hour to upload; PDF validation, registration confirmation, or metadata corrections may take additional time.",
+          "Late, incomplete, incorrectly formatted, or non-compliant submissions may not be included in the final publication workflow.",
+          "The committee may update detailed submission links, PDF eXpress credentials, copyright instructions, and deadlines as the conference schedule is finalized.",
+        ],
+      },
+    ],
+    cmtAcknowledgement:
+      "IRSES 2027 uses the Microsoft Conference Management Toolkit (CMT) to manage paper submission and peer review. Microsoft provides CMT to conferences without charge and supports the service infrastructure, including cloud hosting, platform development, and user support.",
+  },
+
   committees: [
     {
       title: "Chief Patron",

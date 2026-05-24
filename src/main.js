@@ -85,6 +85,98 @@ tracks.innerHTML = conference.tracks
   )
   .join("");
 
+/* ─── Author guidelines ───────────────────────────────────────────────────── */
+text("[data-author-eyebrow]", conference.authorGuidelines.eyebrow);
+text("[data-author-title]", conference.authorGuidelines.title);
+text("[data-author-intro]", conference.authorGuidelines.intro);
+
+const authorActions = document.querySelector("[data-author-actions]");
+if (authorActions) {
+  authorActions.innerHTML = conference.authorGuidelines.actions
+    .map(
+      (action) => `
+      <a class="authors-button ${action.style === "primary" ? "authors-button-primary" : "authors-button-secondary"}" href="${action.href}" target="_blank" rel="noopener">
+        ${action.label}
+      </a>
+    `,
+    )
+    .join("");
+}
+
+const authorEssentials = document.querySelector("[data-author-essentials]");
+if (authorEssentials) {
+  authorEssentials.innerHTML = conference.authorGuidelines.essentials
+    .map(
+      (item) => `
+      <div>
+        <dt>${item.label}</dt>
+        <dd>${item.value}</dd>
+      </div>
+    `,
+    )
+    .join("");
+}
+
+const authorJumpNav = document.querySelector("[data-author-jump-nav]");
+if (authorJumpNav) {
+  authorJumpNav.innerHTML = conference.authorGuidelines.sections
+    .map((section) => `<a href="#${section.id}">${section.title}</a>`)
+    .join("");
+}
+
+const authorListMarkup = (section) => {
+  if (!section.items) return "";
+  const tag = section.ordered ? "ol" : "ul";
+  return `
+    <${tag} class="${section.ordered ? "authors-step-list" : "authors-check-list"}">
+      ${section.items.map((item) => `<li>${item}</li>`).join("")}
+    </${tag}>
+  `;
+};
+
+const authorSpecsMarkup = (section) => {
+  if (!section.specifications) return "";
+  return `
+    <div class="authors-spec-table" role="table" aria-label="${section.title}">
+      ${section.specifications
+        .map(
+          (spec) => `
+          <div class="authors-spec-row" role="row">
+            <div role="cell">${spec.label}</div>
+            <strong role="cell">${spec.value}</strong>
+          </div>
+        `,
+        )
+        .join("")}
+    </div>
+  `;
+};
+
+const authorSections = document.querySelector("[data-author-sections]");
+if (authorSections) {
+  authorSections.innerHTML = conference.authorGuidelines.sections
+    .map(
+      (section) => `
+      <article class="authors-card ${section.specifications ? "authors-card-wide" : ""}" id="${section.id}">
+        <span class="authors-card-label">${section.label}</span>
+        <h3>${section.title}</h3>
+        <p>${section.description}</p>
+        ${authorSpecsMarkup(section)}
+        ${authorListMarkup(section)}
+      </article>
+    `,
+    )
+    .join("");
+}
+
+const authorCmt = document.querySelector("[data-author-cmt]");
+if (authorCmt) {
+  authorCmt.innerHTML = `
+    <span>Microsoft CMT Acknowledgement</span>
+    <p>${conference.authorGuidelines.cmtAcknowledgement}</p>
+  `;
+}
+
 /* ─── Committees ───────────────────────────────────────────────────────────── */
 const memberMarkup = (member) => {
   const person = typeof member === "string" ? { name: member } : member;
