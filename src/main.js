@@ -8,6 +8,16 @@ const text = (selector, value) => {
   if (value === "") element.hidden = true;
 };
 
+const html = (value = "") =>
+  String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+
+const attr = html;
+
 const initials = (name) =>
   name
     .replace(/^(Prof\.|Dr\.)\s+/i, "")
@@ -23,7 +33,7 @@ text("[data-event-label]", conference.label);
 const heroTitle = document.querySelector("[data-event-title]");
 if (heroTitle && conference.heroTitleLines) {
   heroTitle.innerHTML = conference.heroTitleLines
-    .map((line) => `<span>${line}</span>`)
+    .map((line) => `<span>${html(line)}</span>`)
     .join("");
 } else {
   text("[data-event-title]", conference.title);
@@ -40,50 +50,54 @@ text("[data-venue-description]", conference.venueDetails.description);
 text("[data-footer-copy]", conference.footer);
 text("[data-no-show-policy]", conference.registrationGuidelines.noShow);
 
-/* ─── Logo strip — duplicate for seamless marquee ─────────────────────────── */
+/* ─── Logo strip ──────────────────────────────────────────────────────────── */
 const logoMarkup = (logo) =>
   `<figure class="logo-card">
-    <img src="${logo.src}" alt="${logo.name}" loading="lazy" />
+    <img src="${attr(logo.src)}" alt="${attr(logo.name)}" loading="lazy" />
   </figure>`;
 
 const logos = document.querySelector("[data-logos]");
-// Duplicate the logos array so the marquee loops seamlessly
-const allLogos = [...conference.logos, ...conference.logos];
-logos.innerHTML = allLogos.map(logoMarkup).join("");
+if (logos) {
+  logos.innerHTML = conference.logos.map(logoMarkup).join("");
+}
 
 /* ─── Important Dates — vertical timeline ─────────────────────────────────── */
 const dates = document.querySelector("[data-important-dates]");
-dates.innerHTML = conference.importantDates
-  .map(
-    (item) => `
+if (dates) {
+  dates.innerHTML = conference.importantDates
+    .map(
+      (item) => `
     <article class="date-card">
       <div class="date-card-inner">
-        <p>${item.label}</p>
-        <strong>${item.date}</strong>
-        <span>${item.note}</span>
+        <p>${html(item.label)}</p>
+        <strong>${html(item.date)}</strong>
+        <span>${html(item.note)}</span>
       </div>
     </article>
   `,
-  )
-  .join("");
+    )
+    .join("");
+}
 
 /* ─── Technical Tracks ─────────────────────────────────────────────────────── */
 const tracks = document.querySelector("[data-tracks]");
-tracks.innerHTML = conference.tracks
-  .map(
-    (track, index) => `
+if (tracks) {
+  tracks.innerHTML = conference.tracks
+    .map(
+      (track, index) => `
     <article class="track-card">
       <span class="track-number">${String(index + 1).padStart(2, "0")}</span>
       <div class="track-content">
-        <h3>${track.title}</h3>
+        <h3>${html(track.title)}</h3>
         <ul>
-          ${track.scope.map((item) => `<li>${item}</li>`).join("")}
+          ${track.scope.map((item) => `<li>${html(item)}</li>`).join("")}
         </ul>
       </div>
     </article>
   `,
-  )
-  .join("");
+    )
+    .join("");
+}
 
 /* ─── Author guidelines ───────────────────────────────────────────────────── */
 text("[data-author-eyebrow]", conference.authorGuidelines.eyebrow);
@@ -95,8 +109,8 @@ if (authorActions) {
   authorActions.innerHTML = conference.authorGuidelines.actions
     .map(
       (action) => `
-      <a class="authors-button ${action.style === "primary" ? "authors-button-primary" : "authors-button-secondary"}" href="${action.href}" target="_blank" rel="noopener">
-        ${action.label}
+      <a class="authors-button ${action.style === "primary" ? "authors-button-primary" : "authors-button-secondary"}" href="${attr(action.href)}" target="_blank" rel="noopener">
+        ${html(action.label)}
       </a>
     `,
     )
@@ -109,8 +123,8 @@ if (authorEssentials) {
     .map(
       (item) => `
       <div>
-        <dt>${item.label}</dt>
-        <dd>${item.value}</dd>
+        <dt>${html(item.label)}</dt>
+        <dd>${html(item.value)}</dd>
       </div>
     `,
     )
@@ -120,7 +134,7 @@ if (authorEssentials) {
 const authorJumpNav = document.querySelector("[data-author-jump-nav]");
 if (authorJumpNav) {
   authorJumpNav.innerHTML = conference.authorGuidelines.sections
-    .map((section) => `<a href="#${section.id}">${section.title}</a>`)
+    .map((section) => `<a href="#${attr(section.id)}">${html(section.title)}</a>`)
     .join("");
 }
 
@@ -129,7 +143,7 @@ const authorListMarkup = (section) => {
   const tag = section.ordered ? "ol" : "ul";
   return `
     <${tag} class="${section.ordered ? "authors-step-list" : "authors-check-list"}">
-      ${section.items.map((item) => `<li>${item}</li>`).join("")}
+      ${section.items.map((item) => `<li>${html(item)}</li>`).join("")}
     </${tag}>
   `;
 };
@@ -142,8 +156,8 @@ const authorSpecsMarkup = (section) => {
         .map(
           (spec) => `
           <div class="authors-spec-row" role="row">
-            <div role="cell">${spec.label}</div>
-            <strong role="cell">${spec.value}</strong>
+            <div role="cell">${html(spec.label)}</div>
+            <strong role="cell">${html(spec.value)}</strong>
           </div>
         `,
         )
@@ -157,10 +171,10 @@ if (authorSections) {
   authorSections.innerHTML = conference.authorGuidelines.sections
     .map(
       (section) => `
-      <article class="authors-card ${section.specifications ? "authors-card-wide" : ""}" id="${section.id}">
-        <span class="authors-card-label">${section.label}</span>
-        <h3>${section.title}</h3>
-        <p>${section.description}</p>
+      <article class="authors-card ${section.specifications ? "authors-card-wide" : ""}" id="${attr(section.id)}">
+        <span class="authors-card-label">${html(section.label)}</span>
+        <h3>${html(section.title)}</h3>
+        <p>${html(section.description)}</p>
         ${authorSpecsMarkup(section)}
         ${authorListMarkup(section)}
       </article>
@@ -173,7 +187,7 @@ const authorCmt = document.querySelector("[data-author-cmt]");
 if (authorCmt) {
   authorCmt.innerHTML = `
     <span>Microsoft CMT Acknowledgement</span>
-    <p>${conference.authorGuidelines.cmtAcknowledgement}</p>
+    <p>${html(conference.authorGuidelines.cmtAcknowledgement)}</p>
   `;
 }
 
@@ -181,21 +195,21 @@ if (authorCmt) {
 const memberMarkup = (member) => {
   const person = typeof member === "string" ? { name: member } : member;
   const media = person.image
-    ? `<img src="${person.image}" alt="${person.name}" loading="lazy" />`
+    ? `<img src="${attr(person.image)}" alt="${attr(person.name)}" loading="lazy" />`
     : `<span class="member-initials" aria-hidden="true">${initials(person.name)}</span>`;
 
   const infoLink = person.infoLink
-    ? `<a class="member-link" href="${person.infoLink}" target="_blank" rel="noopener" aria-label="View ${person.name}'s profile">More info</a>`
+    ? `<a class="member-link" href="${attr(person.infoLink)}" target="_blank" rel="noopener" aria-label="View ${attr(person.name)}'s profile">More info</a>`
     : "";
   const institute = person.institute
-    ? `<span class="member-institute">${person.institute}</span>`
+    ? `<span class="member-institute">${html(person.institute.trim())}</span>`
     : "";
 
   return `
     <li class="committee-member">
       <div class="member-photo">${media}</div>
       <div class="member-info">
-        <span class="member-name">${person.name}</span>
+        <span class="member-name">${html(person.name)}</span>
         ${institute}
         ${infoLink}
       </div>
@@ -204,18 +218,20 @@ const memberMarkup = (member) => {
 };
 
 const committees = document.querySelector("[data-committees]");
-committees.innerHTML = conference.committees
-  .map(
-    (group) => `
+if (committees) {
+  committees.innerHTML = conference.committees
+    .map(
+      (group) => `
     <article class="committee-card">
-      <h3>${group.title}</h3>
+      <h3>${html(group.title)}</h3>
       <ul class="committee-members">
         ${group.members.map(memberMarkup).join("")}
       </ul>
     </article>
   `,
-  )
-  .join("");
+    )
+    .join("");
+}
 
 /* ─── Sponsorship ─────────────────────────────────────────────────────────── */
 const sponsorshipSummary = document.querySelector("[data-sponsorship-summary]");
@@ -350,8 +366,12 @@ const getRegistrationFee = (currency, group, membership) => {
 const renderRegistrationFees = () => {
   if (!fees) return;
 
-  audienceLabel.textContent = participantTypes[selectedCurrency].label;
-  pricingCard.dataset.currency = selectedCurrency;
+  if (audienceLabel) {
+    audienceLabel.textContent = participantTypes[selectedCurrency].label;
+  }
+  if (pricingCard) {
+    pricingCard.dataset.currency = selectedCurrency;
+  }
 
   fees.innerHTML = feeGroups
     .map((group, groupIndex) => {
@@ -362,14 +382,14 @@ const renderRegistrationFees = () => {
 
           return `
             <div class="pricing-row" role="row">
-              <div class="pricing-membership" role="cell">${membership}</div>
+              <div class="pricing-membership" role="cell">${html(membership)}</div>
               <div class="pricing-price" role="cell" data-label="Early Bird">
                 <span>Early Bird</span>
-                <strong>${fee.earlyBird}</strong>
+                <strong>${html(fee.earlyBird)}</strong>
               </div>
               <div class="pricing-price" role="cell" data-label="Late">
                 <span>Late</span>
-                <strong>${fee.late}</strong>
+                <strong>${html(fee.late)}</strong>
               </div>
             </div>
           `;
@@ -381,8 +401,8 @@ const renderRegistrationFees = () => {
           <div class="pricing-group-heading">
             <span aria-hidden="true">${String(groupIndex + 1).padStart(2, "0")}</span>
             <div>
-              <h4 id="fee-group-${groupIndex}">${group.title}</h4>
-              <p>${group.description}</p>
+              <h4 id="fee-group-${groupIndex}">${html(group.title)}</h4>
+              <p>${html(group.description)}</p>
             </div>
           </div>
           <div class="pricing-row pricing-row-head" role="row">
@@ -410,10 +430,10 @@ currencyButtons.forEach((button) => {
       );
     });
 
-    pricingCard.classList.add("is-switching");
+    pricingCard?.classList.add("is-switching");
     window.setTimeout(() => {
       renderRegistrationFees();
-      pricingCard.classList.remove("is-switching");
+      pricingCard?.classList.remove("is-switching");
     }, 120);
   });
 });
@@ -421,14 +441,18 @@ currencyButtons.forEach((button) => {
 renderRegistrationFees();
 
 const authorNotes = document.querySelector("[data-author-notes]");
-authorNotes.innerHTML = conference.registrationGuidelines.authors
-  .map((item) => `<li>${item}</li>`)
-  .join("");
+if (authorNotes) {
+  authorNotes.innerHTML = conference.registrationGuidelines.authors
+    .map((item) => `<li>${html(item)}</li>`)
+    .join("");
+}
 
 const attendeeNotes = document.querySelector("[data-attendee-notes]");
-attendeeNotes.innerHTML = conference.registrationGuidelines.attendees
-  .map((item) => `<li>${item}</li>`)
-  .join("");
+if (attendeeNotes) {
+  attendeeNotes.innerHTML = conference.registrationGuidelines.attendees
+    .map((item) => `<li>${html(item)}</li>`)
+    .join("");
+}
 
 /* ─── Contact ──────────────────────────────────────────────────────────────── */
 const contactIcons = {
@@ -440,27 +464,29 @@ const contactIcons = {
 };
 
 const contact = document.querySelector("[data-contact]");
-contact.innerHTML = conference.contact
-  .map((item) => {
+if (contact) {
+  contact.innerHTML = conference.contact
+    .map((item) => {
     const icon = contactIcons[item.label] || `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>`;
     const isEmail = item.label === "Conference Email";
     const valueHtml = isEmail
-      ? `<strong><a href="mailto:${item.value}">${item.value}</a></strong>`
-      : `<strong>${item.value}</strong>`;
+      ? `<strong><a href="mailto:${attr(item.value)}">${html(item.value)}</a></strong>`
+      : `<strong>${html(item.value)}</strong>`;
 
     return `
       <article class="contact-card">
         <div class="contact-card-top">
           <div class="contact-card-icon" aria-hidden="true">${icon}</div>
-          <span>${item.label}</span>
+          <span>${html(item.label)}</span>
         </div>
         <div class="contact-card-value">
           ${valueHtml}
         </div>
       </article>
     `;
-  })
-  .join("");
+    })
+    .join("");
+}
 
 /* ─── Header scroll + active nav ──────────────────────────────────────────── */
 const header      = document.querySelector("[data-header]");
@@ -469,36 +495,55 @@ const menuButton  = document.querySelector("[data-menu-button]");
 const progressBar = document.getElementById("progress-bar");
 const fabTop      = document.getElementById("fab-top");
 
-window.addEventListener("scroll", () => {
+const updateScrollState = () => {
   const scrolled = window.scrollY;
   const total = document.documentElement.scrollHeight - window.innerHeight;
 
   // Sticky header
-  header.classList.toggle("is-scrolled", scrolled > 12);
+  header?.classList.toggle("is-scrolled", scrolled > 12);
 
   // Progress bar
-  progressBar.style.width = total > 0 ? `${(scrolled / total) * 100}%` : "0%";
+  if (progressBar) {
+    progressBar.style.width = total > 0 ? `${(scrolled / total) * 100}%` : "0%";
+  }
 
   // Floating back-to-top
-  fabTop.classList.toggle("is-visible", scrolled > 400);
-});
+  fabTop?.classList.toggle("is-visible", scrolled > 400);
+};
+
+let scrollTicking = false;
+window.addEventListener(
+  "scroll",
+  () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(() => {
+      updateScrollState();
+      updateActiveSection();
+      scrollTicking = false;
+    });
+  },
+  { passive: true },
+);
 
 // Back-to-top FAB
-fabTop.addEventListener("click", () => {
+fabTop?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 /* ─── Mobile menu ──────────────────────────────────────────────────────────── */
-menuButton.addEventListener("click", () => {
+menuButton?.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("is-open");
   menuButton.classList.toggle("is-open", isOpen);
+  menuButton.setAttribute("aria-expanded", String(isOpen));
   menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
 
-nav.addEventListener("click", (event) => {
+nav?.addEventListener("click", (event) => {
   if (event.target.matches("a")) {
     nav.classList.remove("is-open");
     menuButton.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", "false");
   }
 });
 
@@ -553,9 +598,8 @@ const updateActiveSection = () => {
   });
 };
 
-window.addEventListener("scroll", updateActiveSection);
-
 updateActiveSection();
+updateScrollState();
 
 /* ─── Dark mode removed ────────────────────────────────────────────────────── */
 
@@ -569,6 +613,7 @@ if (heroMedia) {
     }
   };
   window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 }
 
 /* ─── Reveal on scroll (with stagger support) ──────────────────────────────── */
