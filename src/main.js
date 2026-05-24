@@ -505,23 +505,45 @@ nav.addEventListener("click", (event) => {
 });
 
 /* ─── Active nav link tracking ─────────────────────────────────────────────── */
-const sections  = document.querySelectorAll("main section[id], header[id]");
-const navLinks  = document.querySelectorAll(".site-nav a[href^='#']");
+const navItems = [
+  "home",
+  "about",
+  "dates",
+  "tracks",
+  "authors",
+  "committees",
+  "sponsorship",
+  "fellowship",
+  "registration",
+  "venue",
+  "contact"
+];
+
+let activeSection = "";
+const sections = navItems.map(id => document.getElementById(id)).filter(Boolean);
+const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
+
+const setActiveSection = (id) => {
+  if (activeSection === id) return;
+  activeSection = id;
+  
+  navLinks.forEach((link) => {
+    link.classList.toggle(
+      "is-active",
+      link.getAttribute("href") === `#${id}`
+    );
+  });
+};
 
 const navObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        navLinks.forEach((link) => {
-          link.classList.toggle(
-            "is-active",
-            link.getAttribute("href") === `#${entry.target.id}`,
-          );
-        });
+        setActiveSection(entry.target.id);
       }
     });
   },
-  { threshold: 0.3, rootMargin: "-60px 0px -40% 0px" },
+  { threshold: 0.25, rootMargin: "-80px 0px -40% 0px" }
 );
 
 sections.forEach((section) => navObserver.observe(section));
