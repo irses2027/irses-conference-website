@@ -8,63 +8,80 @@
       content="IRSES 2027 conference website starter for academic event information, submissions, registration, venue, committees, and contact details."
     />
     <title>IRSES 2027 | Conference Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./src/styles/main.css?v=2" />
   </head>
   <body>
     <!-- Scroll progress -->
     <div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
     <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="IRSES 2027 home">
-        <img class="brand-logo" src="./assets/dau-logo.jpg" alt="Dhirubhai Ambani University" />
-        <span>
-          <strong>IRSES 2027</strong>
-        </span>
-      </a>
+      <div class="header-masthead">
+        <a class="brand" href="#welcome" aria-label="IRSES 2027 home">
+          <span class="brand-logos" aria-hidden="true">
+            <img class="brand-logo" src="./assets/ieee-gujarat-section.png" alt="" />
+            <img class="brand-logo" src="./assets/dau-logo.jpg" alt="" />
+            <span class="conference-mark">IRSES<br />2027</span>
+          </span>
+          <span class="brand-copy">
+            <strong>International Conference on Intelligent, Resilient, and Sustainable Energy Systems</strong>
+            <small>19-21 February 2027 | Dhirubhai Ambani University, Gandhinagar</small>
+          </span>
+        </a>
+      </div>
 
-      <nav class="site-nav" data-nav aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#dates">Dates</a>
-        <a href="#tracks">Tracks</a>
-        <a href="#authors">Authors</a>
-        <a href="#committees">Committees</a>
-        <a href="#sponsorship">Sponsorship</a>
-        <a href="#fellowship">Grants</a>
-        <a class="nav-cta" href="#registration">Registration</a>
-        <a href="#venue">Venue</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="header-actions">
+      <div class="nav-row">
         <button class="menu-button" type="button" data-menu-button aria-label="Open menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
+
+        <nav class="site-nav" data-nav aria-label="Primary navigation">
+          <ul class="nav-menu">
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="has-submenu">
+              <a href="#dates">Program</a>
+              <ul class="submenu">
+                <li><a href="#dates">Important Dates</a></li>
+                <li><a href="#scope">Scope</a></li>
+                <li><a href="#call-for-papers">Call for Papers</a></li>
+                <li><a href="#tracks">Tracks</a></li>
+                <li><a href="#registration">Registration</a></li>
+              </ul>
+            </li>
+            <li><a href="#publication">Publication</a></li>
+            <li><a href="#committees">Committees</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a class="nav-cta" href="#registration">Registration</a></li>
+            <li class="has-submenu">
+              <a href="#venue">Venue</a>
+              <ul class="submenu">
+                <li><a href="#venue">Host Campus</a></li>
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow hero-eyebrow" data-event-label></p>
-          <h1 id="hero-title" data-event-title></h1>
-          <p class="hero-theme" data-event-theme></p>
-          <div class="hero-actions">
-            <a class="button primary" href="#registration">19-21 February 2027</a>
-            <a class="button secondary" href="#tracks">Explore Tracks</a>
-          </div>
+      <section class="hero" id="welcome" aria-labelledby="hero-title">
+        <div class="hero-logo-row" aria-label="Institution logos">
+          <img src="./assets/dau-logo.jpg" alt="Dhirubhai Ambani University" />
+          <div class="hero-logo-seal" aria-hidden="true">IRSES<br />2027</div>
+          <img src="./assets/ieee-gujarat-section.png" alt="IEEE Gujarat Section" />
         </div>
-        <aside class="hero-panel" aria-label="Conference snapshot">
-          <p class="panel-label">Conference Snapshot</p>
-          <dl>
+
+        <div class="hero-content">
+          <p class="hero-kicker">Welcome</p>
+          <h1 id="hero-title">International Conference on Intelligent, Resilient, and Sustainable Energy Systems</h1>
+          <p class="hero-conference-code">(IRSES 2027)</p>
+
+          <dl class="hero-details" aria-label="Conference details">
             <div>
               <dt>Dates</dt>
               <dd data-event-dates></dd>
@@ -74,21 +91,43 @@
               <dd data-event-venue></dd>
             </div>
             <div>
-              <dt>Host</dt>
-              <dd data-event-host></dd>
+              <dt>Technical Sponsors</dt>
+              <dd>IEEE Gujarat Section</dd>
             </div>
           </dl>
-        </aside>
+
+          <div class="hero-actions" aria-label="Conference actions">
+            <a class="button primary" href="#call-for-papers">Paper Submission</a>
+            <a class="button secondary" href="#registration">Registration</a>
+            <a class="button secondary" href="#about">Brochure</a>
+            <a class="button secondary" href="#dates">Program</a>
+          </div>
+        </div>
       </section>
 
-      <section class="logo-strip" aria-label="Organizers and partners">
-        <div class="logo-strip-inner" data-logos></div>
+      <section class="section classic-section" id="announcements">
+        <div class="section-heading">
+          <h2>Announcements</h2>
+        </div>
+        <div class="classic-box news-panel">
+          <ul class="classic-list">
+            <li>Paper submission opens on 1 June 2026.</li>
+            <li>The Microsoft CMT submission portal details will be announced soon.</li>
+            <li>Registration, brochure, and programme downloads will be updated as released by the committee.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section muted" id="dates">
+        <div class="section-heading">
+          <h2>Important Dates</h2>
+        </div>
+        <div class="date-grid reveal" data-important-dates></div>
       </section>
 
       <section class="section intro-section reveal" id="about">
         <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>Conference Overview</h2>
+          <h2>About Conference</h2>
         </div>
         <div class="intro-grid">
           <article class="lead-copy">
@@ -97,29 +136,50 @@
           </article>
           <div class="quick-links" aria-label="Conference actions">
             <a href="#tracks">Call for Papers</a>
-            <a href="#authors">Author Guidelines</a>
+            <a href="#call-for-papers">Author Guidelines</a>
             <a class="nav-cta" href="#registration">Register</a>
-            <a href="#sponsorship">Sponsorship</a>
-            <a href="#fellowship">Travel Grants</a>
+            <a href="#sponsors">Sponsorship</a>
+            <a href="#downloads">Downloads</a>
             <a href="#committees">Committees</a>
             <a href="#contact">Contact Secretariat</a>
           </div>
         </div>
       </section>
 
-      <section class="section muted" id="dates">
+      <section class="section classic-section" id="scope">
         <div class="section-heading">
-          <p class="eyebrow">Timeline</p>
-          <h2>Important Dates</h2>
+          <h2>Conference Scope</h2>
         </div>
-        <div class="date-grid reveal" data-important-dates></div>
+        <div class="classic-box information-panel">
+          <p>
+            IRSES 2027 invites work on intelligent energy technologies, resilient grids,
+            cyber-physical infrastructure, sustainable systems, efficient hardware, and
+            research connecting policy, markets, and climate-aware engineering practice.
+          </p>
+        </div>
+      </section>
+
+      <section class="section classic-section" id="call-for-papers">
+        <div class="section-heading">
+          <h2>Call for Papers</h2>
+        </div>
+        <div class="classic-box classic-two-column information-panel">
+          <p>
+            Authors are invited to submit original and unpublished research papers aligned
+            with the conference themes. Manuscripts must follow the IEEE conference format
+            and will be reviewed by the Technical Program Committee.
+          </p>
+          <div class="classic-actions">
+            <a class="button primary" href="#downloads">Submission Guidelines</a>
+            <a class="button secondary" href="#tracks">View Tracks</a>
+          </div>
+        </div>
       </section>
 
       <section class="section" id="tracks">
         <div class="track-layout">
           <div class="section-heading track-intro">
-            <p class="eyebrow">Call For Papers</p>
-            <h2>Technical Tracks</h2>
+            <h2>Tracks</h2>
             <p>
               Submit original research across intelligent, resilient, and sustainable energy systems.
             </p>
@@ -128,74 +188,27 @@
         </div>
       </section>
 
-      <section class="section authors-section reveal" id="authors" aria-labelledby="authors-title">
-        <div class="authors-shell">
-          <div class="authors-copy">
-            <p class="eyebrow" data-author-eyebrow></p>
-            <h2 id="authors-title" data-author-title></h2>
-            <p data-author-intro></p>
-            <div class="authors-actions" data-author-actions></div>
-          </div>
-          <aside class="authors-essentials" aria-label="Author submission essentials">
-            <h3>Submission Essentials</h3>
-            <dl data-author-essentials></dl>
-          </aside>
-        </div>
-        <nav class="authors-jump-nav" aria-label="Author guideline sections" data-author-jump-nav></nav>
-        <div class="authors-grid" data-author-sections></div>
-        <article class="authors-cmt-note" data-author-cmt></article>
-      </section>
-
-      <section class="section split-section" id="committees">
+      <section class="section classic-section" id="publication">
         <div class="section-heading">
-          <p class="eyebrow">People</p>
-          <h2>Committees</h2>
+          <h2>Publication</h2>
         </div>
-        <div class="committee-layout reveal" data-committees></div>
-      </section>
-
-      <section class="section muted sponsorship-section reveal" id="sponsorship">
-        <div class="section-heading wide">
-          <div>
-            <p class="eyebrow">Partner With Us</p>
-            <h2>Sponsorship</h2>
-          </div>
-          <p data-sponsorship-summary></p>
-        </div>
-        <div class="sponsorship-intro" data-sponsorship-intro></div>
-        <div class="sponsorship-packages">
-          <div class="package-table" role="table" aria-label="Sponsorship packages" data-sponsorship-packages></div>
-          <p class="package-note" data-sponsorship-tax-note></p>
-        </div>
-        <div class="benefit-grid" data-sponsorship-benefits></div>
-        <div class="sponsorship-contact" data-sponsorship-contact></div>
-      </section>
-
-      <section class="section fellowship-section reveal" id="fellowship">
-        <div class="section-heading">
-          <p class="eyebrow">Awards And Grants</p>
-          <h2>Travel Grants</h2>
-        </div>
-        <div class="fellowship-grid">
-          <article class="fellowship-panel">
-            <p data-travel-grants-description></p>
-            <h3>Application Details</h3>
-            <p data-travel-grants-instruction></p>
-            <ul class="field-list" data-travel-grant-fields></ul>
-          </article>
-          <article class="fellowship-panel accent-panel">
-            <p class="eyebrow">Recognition</p>
-            <h3>Awards</h3>
-            <p data-awards-description></p>
-          </article>
+        <div class="classic-box information-panel">
+          <p>
+            Accepted and presented papers will be considered for submission to IEEE Xplore
+            after the conference, subject to IEEE requirements and conference quality checks.
+          </p>
+          <ul class="classic-list">
+            <li>At least one author must complete registration for each accepted paper.</li>
+            <li>Camera-ready papers must satisfy the required IEEE PDF compliance checks.</li>
+            <li>Publication is subject to peer review, presentation, copyright, and post-conference screening.</li>
+          </ul>
         </div>
       </section>
 
       <section class="section muted registration-section reveal" id="registration">
         <div class="section-heading registration-heading">
           <div>
-            <p class="eyebrow">Participation</p>
-            <h2>Registration Fees</h2>
+            <h2>Registration</h2>
             <p>Switch between Indian and Foreign participant categories.</p>
           </div>
         </div>
@@ -228,9 +241,40 @@
         </div>
       </section>
 
+      <section class="section classic-section" id="speakers">
+        <div class="section-heading">
+          <h2>Speakers</h2>
+        </div>
+        <div class="classic-box information-panel">
+          <p>Keynote and invited speaker details will be announced by the organizing committee.</p>
+        </div>
+      </section>
+
+      <section class="section split-section" id="committees">
+        <div class="section-heading">
+          <h2>Committee</h2>
+        </div>
+        <div class="committee-layout reveal" data-committees></div>
+      </section>
+
+      <section class="section muted sponsorship-section reveal" id="sponsors">
+        <div class="section-heading wide">
+          <div>
+            <h2>Sponsors</h2>
+          </div>
+          <p data-sponsorship-summary></p>
+        </div>
+        <div class="sponsorship-intro" data-sponsorship-intro></div>
+        <div class="sponsorship-packages">
+          <div class="package-table" role="table" aria-label="Sponsorship packages" data-sponsorship-packages></div>
+          <p class="package-note" data-sponsorship-tax-note></p>
+        </div>
+        <div class="benefit-grid" data-sponsorship-benefits></div>
+        <div class="sponsorship-contact" data-sponsorship-contact></div>
+      </section>
+
       <section class="section venue-section reveal" id="venue">
         <div class="venue-copy">
-          <p class="eyebrow">Venue</p>
           <h2 data-venue-title></h2>
           <p data-venue-description></p>
         </div>
@@ -239,10 +283,23 @@
         </figure>
       </section>
 
+      <section class="section classic-section" id="downloads">
+        <div class="section-heading">
+          <h2>Downloads</h2>
+        </div>
+        <div class="classic-box information-panel">
+          <ul class="download-list">
+            <li><a href="#about">Conference Brochure <span>To be updated</span></a></li>
+            <li><a href="#dates">Programme Schedule <span>To be updated</span></a></li>
+            <li><a href="#call-for-papers">Author Instructions <span>Available online</span></a></li>
+            <li><a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">IEEE Manuscript Templates <span>External link</span></a></li>
+          </ul>
+        </div>
+      </section>
+
       <section class="section contact-section" id="contact">
         <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Conference Secretariat</h2>
+          <h2>Contact</h2>
         </div>
         <div class="contact-grid reveal" data-contact></div>
       </section>
@@ -251,7 +308,7 @@
     <footer class="site-footer">
       <p data-footer-copy></p>
       <div class="footer-links">
-        <a href="#home">Back to top ↑</a>
+        <a href="#welcome">Back to top ↑</a>
       </div>
     </footer>
 

@@ -29,20 +29,8 @@ const initials = (name) =>
 
 /* ─── Text content ─────────────────────────────────────────────────────────── */
 text("[data-event-label]", conference.label);
-
-const heroTitle = document.querySelector("[data-event-title]");
-if (heroTitle && conference.heroTitleLines) {
-  heroTitle.innerHTML = conference.heroTitleLines
-    .map((line) => `<span>${html(line)}</span>`)
-    .join("");
-} else {
-  text("[data-event-title]", conference.title);
-}
-
-text("[data-event-theme]", conference.theme);
 text("[data-event-dates]", conference.dates);
 text("[data-event-venue]", conference.venue);
-text("[data-event-host]", conference.host);
 text("[data-event-description]", conference.description);
 text("[data-event-purpose]", conference.purpose);
 text("[data-venue-title]", conference.venueDetails.title);
@@ -488,8 +476,7 @@ if (contact) {
     .join("");
 }
 
-/* ─── Header scroll + active nav ──────────────────────────────────────────── */
-const header      = document.querySelector("[data-header]");
+/* ─── Scroll progress + active nav ────────────────────────────────────────── */
 const nav         = document.querySelector("[data-nav]");
 const menuButton  = document.querySelector("[data-menu-button]");
 const progressBar = document.getElementById("progress-bar");
@@ -498,9 +485,6 @@ const fabTop      = document.getElementById("fab-top");
 const updateScrollState = () => {
   const scrolled = window.scrollY;
   const total = document.documentElement.scrollHeight - window.innerHeight;
-
-  // Sticky header
-  header?.classList.toggle("is-scrolled", scrolled > 12);
 
   // Progress bar
   if (progressBar) {
@@ -528,7 +512,7 @@ window.addEventListener(
 
 // Back-to-top FAB
 fabTop?.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0 });
 });
 
 /* ─── Mobile menu ──────────────────────────────────────────────────────────── */
@@ -549,16 +533,20 @@ nav?.addEventListener("click", (event) => {
 
 /* ─── Active nav link tracking ─────────────────────────────────────────────── */
 const navItems = [
-  "home",
-  "about",
+  "welcome",
+  "announcements",
   "dates",
+  "about",
+  "scope",
+  "call-for-papers",
   "tracks",
-  "authors",
-  "committees",
-  "sponsorship",
-  "fellowship",
+  "publication",
   "registration",
+  "speakers",
+  "committees",
+  "sponsors",
   "venue",
+  "downloads",
   "contact"
 ];
 
@@ -603,36 +591,5 @@ updateScrollState();
 
 /* ─── Dark mode removed ────────────────────────────────────────────────────── */
 
-/* ─── Hero parallax ─────────────────────────────────────────────────────────── */
-const heroMedia = document.querySelector(".hero-media");
-if (heroMedia) {
-  const onScroll = () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight) {
-      heroMedia.style.transform = `scale(1.06) translateY(${y * 0.18}px)`;
-    }
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-}
-
-/* ─── Reveal on scroll (with stagger support) ──────────────────────────────── */
-const revealItems = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.08 },
-  );
-
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-}
+/* ─── Static homepage sections ─────────────────────────────────────────────── */
+document.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
