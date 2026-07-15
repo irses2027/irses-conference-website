@@ -21,31 +21,35 @@ export const conference = {
       name: "IEEE Gujarat Section",
       src: "./assets/ieee-gujarat-section.png",
     },
-    /*{
+    {
       name: "Smart Energy Learning Center",
       src: "./assets/smart-energy-learning-center.jpg",
-    },*/
+    },
   ],
   importantDates: [
     {
       label: "Paper submission opens",
-      date: "1 June 2026",
+      date: "20 June 2026",
       note: "Submission portal details will be announced soon.",
     },
     {
       label: "Paper submission deadline",
-      date: "15 August 2026",
+      date: "15 September 2026",
       note: "Authors should submit full papers before the deadline.",
     },
     {
       label: "Acceptance notification",
-      date: "1 November 2026",
+      date: "30 November 2026",
       note: "Accepted papers will proceed to final submission and registration.",
     },
     {
       label: "Final paper submission",
-      date: "1 December 2026",
+      date: "20 December 2026",
       note: "Camera-ready paper and author registration details will be required.",
+    },
+    {
+     label: "Registration",
+     date: "1 December – 20 December 2026",
     },
     {
       label: "Conference dates",
