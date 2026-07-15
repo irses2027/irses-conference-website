@@ -19,13 +19,25 @@
           <span class="brand-logos" aria-hidden="true">
             <img class="brand-logo" src="./assets/ieee-gujarat-section.png" alt="" />
             <img class="brand-logo" src="./assets/dau-logo.jpg" alt="" />
+            <img class="brand-logo brand-logo-wide" src="./assets/smart-energy-learning-center.jpg" alt="" />
             <span class="conference-mark">IRSES<br />2027</span>
           </span>
-          <span class="brand-copy">
-            <strong>International Conference on Intelligent, Resilient, and Sustainable Energy Systems</strong>
-            <small>19-21 February 2027 | Dhirubhai Ambani University, Gandhinagar</small>
-          </span>
         </a>
+
+        <form class="site-search" role="search" data-site-search>
+          <label class="sr-only" for="site-search-input">Search conference website</label>
+          <input
+            id="site-search-input"
+            type="search"
+            autocomplete="off"
+            placeholder="Search the conference website"
+            data-search-input
+          />
+          <button type="submit" aria-label="Search">Search</button>
+          <div class="search-results" data-search-results hidden></div>
+        </form>
+
+        <img class="ieee-master-logo" src="./assets/ieee-logo.png" alt="IEEE" />
       </div>
 
       <div class="nav-row">
@@ -70,38 +82,46 @@
 
     <main>
       <section class="hero" id="welcome" aria-labelledby="hero-title">
-        <div class="hero-logo-row" aria-label="Institution logos">
-          <img src="./assets/dau-logo.jpg" alt="Dhirubhai Ambani University" />
-          <div class="hero-logo-seal" aria-hidden="true">IRSES<br />2027</div>
-          <img src="./assets/ieee-gujarat-section.png" alt="IEEE Gujarat Section" />
-        </div>
-
-        <div class="hero-content">
-          <p class="hero-kicker">Welcome</p>
-          <h1 id="hero-title">International Conference on Intelligent, Resilient, and Sustainable Energy Systems</h1>
-          <p class="hero-conference-code">(IRSES 2027)</p>
-
-          <dl class="hero-details" aria-label="Conference details">
-            <div>
-              <dt>Dates</dt>
-              <dd data-event-dates></dd>
+        <div class="hero-layout">
+          <div class="hero-content">
+            <div class="hero-logo-row" aria-label="Institution logos">
+              <img src="./assets/dau-logo.jpg" alt="Dhirubhai Ambani University" />
+              <div class="hero-logo-seal" aria-hidden="true">IRSES<br />2027</div>
+              <img src="./assets/smart-energy-learning-center.jpg" alt="Smart Energy Learning Center" />
+              <img src="./assets/ieee-gujarat-section.png" alt="IEEE Gujarat Section" />
             </div>
-            <div>
-              <dt>Venue</dt>
-              <dd data-event-venue></dd>
-            </div>
-            <div>
-              <dt>Technical Sponsors</dt>
-              <dd>IEEE Gujarat Section</dd>
-            </div>
-          </dl>
 
-          <div class="hero-actions" aria-label="Conference actions">
-            <a class="button primary" href="#call-for-papers">Paper Submission</a>
-            <a class="button secondary" href="#registration">Registration</a>
-            <a class="button secondary" href="#about">Brochure</a>
-            <a class="button secondary" href="#dates">Program</a>
+            <p class="hero-kicker">Welcome</p>
+            <h1 id="hero-title">International Conference on Intelligent, Resilient, and Sustainable Energy Systems</h1>
+            <p class="hero-conference-code">(IRSES 2027)</p>
+
+            <dl class="hero-details" aria-label="Conference details">
+              <div>
+                <dt>Dates</dt>
+                <dd data-event-dates></dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd data-event-venue></dd>
+              </div>
+              <div>
+                <dt>Technical Sponsors</dt>
+                <dd>IEEE Gujarat Section</dd>
+              </div>
+            </dl>
+
+            <div class="hero-actions" aria-label="Conference actions">
+              <a class="button primary" href="#call-for-papers">Paper Submission</a>
+              <a class="button secondary" href="#registration">Registration</a>
+              <a class="button secondary" href="#about">Brochure</a>
+              <a class="button secondary" href="#dates">Program</a>
+            </div>
           </div>
+
+          <figure class="hero-campus">
+            <img src="./assets/daiict-entrance.png" alt="Dhirubhai Ambani University campus entrance" />
+            <figcaption>Dhirubhai Ambani University, Gandhinagar</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -263,6 +283,25 @@
             <h2>Sponsors</h2>
           </div>
           <p data-sponsorship-summary></p>
+        </div>
+        <div class="our-sponsors" aria-label="Our sponsors">
+          <h3>Our Sponsors</h3>
+          <div class="sponsor-card-grid">
+            <article class="sponsor-card">
+              <img src="./assets/ieee-gujarat-section.png" alt="IEEE Gujarat Section" />
+              <div>
+                <strong>IEEE Gujarat Section</strong>
+                <span>Financial Co-Sponsor</span>
+              </div>
+            </article>
+            <article class="sponsor-card">
+              <img src="./assets/smart-energy-learning-center.jpg" alt="Smart Energy Learning Center" />
+              <div>
+                <strong>SLEC</strong>
+                <span>Gold Sponsor</span>
+              </div>
+            </article>
+          </div>
         </div>
         <div class="sponsorship-intro" data-sponsorship-intro></div>
         <div class="sponsorship-packages">

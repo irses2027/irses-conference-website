@@ -531,6 +531,100 @@ nav?.addEventListener("click", (event) => {
   }
 });
 
+/* ─── In-page search ──────────────────────────────────────────────────────── */
+const searchForm = document.querySelector("[data-site-search]");
+const searchInput = document.querySelector("[data-search-input]");
+const searchResults = document.querySelector("[data-search-results]");
+
+const searchSections = Array.from(document.querySelectorAll("main section[id]")).map(
+  (section) => {
+    const heading = section.querySelector("h1, h2, h3")?.textContent?.trim() || section.id;
+    const body = section.textContent.replace(/\s+/g, " ").trim();
+
+    return {
+      id: section.id,
+      title: heading,
+      content: `${heading} ${body}`.toLowerCase(),
+    };
+  },
+);
+
+const closeSearchResults = () => {
+  if (!searchResults) return;
+  searchResults.hidden = true;
+  searchResults.innerHTML = "";
+};
+
+const goToSearchResult = (id) => {
+  const section = document.getElementById(id);
+  if (!section) return;
+
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
+  closeSearchResults();
+  searchInput.value = "";
+  searchInput.blur();
+};
+
+const getSearchMatches = (query) => {
+  const normalized = query.trim().toLowerCase();
+  if (normalized.length < 2) return [];
+
+  return searchSections
+    .filter((section) => section.content.includes(normalized))
+    .slice(0, 6);
+};
+
+const renderSearchResults = () => {
+  if (!searchInput || !searchResults) return;
+
+  const matches = getSearchMatches(searchInput.value);
+  if (!matches.length) {
+    searchResults.innerHTML = searchInput.value.trim().length >= 2
+      ? `<p>No matching sections found.</p>`
+      : "";
+    searchResults.hidden = searchResults.innerHTML === "";
+    return;
+  }
+
+  searchResults.innerHTML = matches
+    .map(
+      (match) => `
+      <button type="button" data-search-result="${attr(match.id)}">
+        <span>${html(match.title)}</span>
+      </button>
+    `,
+    )
+    .join("");
+  searchResults.hidden = false;
+};
+
+searchInput?.addEventListener("input", renderSearchResults);
+
+searchForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const firstMatch = getSearchMatches(searchInput.value)[0];
+  if (firstMatch) goToSearchResult(firstMatch.id);
+});
+
+searchResults?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-search-result]");
+  if (!button) return;
+  goToSearchResult(button.dataset.searchResult);
+});
+
+searchInput?.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeSearchResults();
+    searchInput.blur();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!searchForm?.contains(event.target)) {
+    closeSearchResults();
+  }
+});
+
 /* ─── Active nav link tracking ─────────────────────────────────────────────── */
 const navItems = [
   "welcome",
