@@ -5,7 +5,7 @@ export const conference = {
   heroTitleLines: ["Intelligent, Resilient,", "and Sustainable", "Energy Systems"],
   theme: "A global forum for research shaping smarter, cleaner, and more resilient energy futures.",
   dates: "19-21 February 2027",
-  venue: "Dhirubhai Ambani University, Gandhinagar, formerly known as DAIICT",
+  venue: "Dhirubhai Ambani University, Gandhinagar",
   host: "DAU",
   description:
     "IRSES 2027 brings together researchers, academicians, industry professionals, and students working on intelligent, resilient, and sustainable energy systems.",
@@ -29,7 +29,7 @@ export const conference = {
   importantDates: [
     {
       label: "Paper submission opens",
-      date: "20 June 2026",
+      date: "20 July 2026",
       note: "Submission portal details will be announced soon.",
     },
     {
