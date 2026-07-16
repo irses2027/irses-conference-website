@@ -479,16 +479,63 @@ h4 {
 
 .hero-details {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Change to 3 if you add Technical Sponsors back */
+  gap: 16px;
+  margin: 24px 0;
+  border: none;
+  text-align: left;
+}
+
+.hero-details div {
+  min-width: 0;
+  padding: 18px 22px;
+  background: #ffffff;
+  border: 1px solid #d9dee7;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.hero-details div:hover {
+  border-color: #0056a4;
+  box-shadow: 0 4px 12px rgba(0, 86, 164, 0.12);
+}
+
+.hero-details div:last-child {
+  border-right: 1px solid #d9dee7;
+}
+
+.hero-details dt {
+  margin-bottom: 8px;
+  color: var(--dark-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-details dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+/*
+.hero-details {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 24px 0 0;
-  /*border: 1px solid var(--border);*/
+  border: 1px solid var(--border);
   text-align: left;
 }
 
 .hero-details div {
   min-width: 0;
   padding: 13px 15px;
- /*border-right: 1px solid var(--border);*/
+ border-right: 1px solid var(--border);
 }
 
 .hero-details div:last-child {
@@ -510,7 +557,7 @@ h4 {
   font-weight: 700;
   line-height: 1.4;
 }
-
+*/
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
