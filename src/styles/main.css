@@ -184,14 +184,25 @@ h4 {
   flex: 0 0 auto;
 }
 
+.brand-logos a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logos a:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
 .brand-logo,
 .conference-mark {
   width: 82px;
   height: 50px;
   object-fit: contain;
-  border: 1px solid var(--border);
-  background: #FFFFFF;
-  padding: 5px 7px;
+  border: none;          /* Remove border */
+  background: transparent; /* Remove white box */
+  padding: 4px;            /* Remove extra spacing */
 }
 
 .conference-mark {
@@ -4060,7 +4071,7 @@ details + details {
   margin: 0 auto;
   padding: 10px 0;
 }
-
+/*
 .brand {
   width: auto;
   min-width: 0;
@@ -4082,6 +4093,42 @@ details + details {
 
 .brand-logo-wide {
   width: 128px;
+}*/
+
+.brand {
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.brand-logos {
+  min-width: 0;
+  flex-wrap: nowrap;
+}
+
+.brand-logo {
+  width: 96px;
+  height: 58px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.conference-mark {
+  width: 96px;
+  height: 58px;
+  flex: 0 0 auto;
+
+  display: grid;
+  place-items: center;
+
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
 }
 
 .site-search {
