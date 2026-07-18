@@ -236,13 +236,16 @@ h4 {
 
 .nav-row {
   background: var(--primary-blue);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 40;
 }
 
 .site-nav {
-  width: min(calc(100% - 32px), var(--container-wide));
+  width: min(calc(100% - 32px), 1440px);
   margin: 0 auto;
   color: #FFFFFF;
-  font-size: 0.88rem;
+  font-size: 1.02rem;
   font-weight: 600;
 }
 
@@ -255,7 +258,10 @@ h4 {
 
 .nav-menu {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  min-height: 64px;
 }
 
 .nav-menu > li,
@@ -266,65 +272,78 @@ h4 {
 .site-nav a {
   display: flex;
   align-items: center;
-  min-height: 38px;
-  padding: 9px 13px;
+  min-height: 42px;
+  padding: 0 16px;
+  margin: 0 4px;
   color: #FFFFFF;
   line-height: 1.2;
   white-space: nowrap;
-  transition: background 140ms ease, color 140ms ease;
+  border-radius: 6px;
+  transition: background 250ms ease, color 250ms ease, transform 200ms ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
 .site-nav a.is-active {
-  background: var(--dark-blue);
+  background: rgba(255, 255, 255, 0.15);
   color: #FFFFFF;
+  transform: translateY(-1px);
 }
 
 .has-submenu > a::after {
   content: "";
   width: 0;
   height: 0;
-  margin-left: 7px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid currentColor;
+  margin-left: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid currentColor;
+  transition: transform 250ms ease;
+}
+
+.has-submenu:hover > a::after {
+  transform: rotate(180deg);
 }
 
 .submenu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 6px;
   z-index: 30;
   display: none;
-  min-width: 210px;
-  border: 1px solid #8FB3DA;
+  min-width: 240px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
   background: #FFFFFF;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 8px 0;
 }
 
 .submenu .submenu {
-  top: -1px;
+  top: -8px;
   left: 100%;
 }
 
 .submenu a {
-  min-height: 36px;
-  padding: 9px 12px;
+  min-height: 44px;
+  padding: 10px 24px;
+  margin: 0 8px;
+  border-bottom: none;
+  border-radius: 4px;
   color: var(--dark-blue);
-  border-bottom: 1px solid var(--border);
-  background: #FFFFFF;
+  background: transparent;
 }
 
 .submenu li:last-child > a {
-  border-bottom: 0;
 }
 
 .submenu a:hover,
 .submenu a:focus-visible,
 .submenu a.is-active {
-  color: #FFFFFF;
-  background: var(--primary-blue);
+  color: var(--primary-blue);
+  background: var(--light-blue);
+  transform: none;
 }
 
 .has-submenu:hover > .submenu,
@@ -337,6 +356,7 @@ h4 {
 .site-nav a.nav-cta.is-active {
   background: var(--dark-blue);
   color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .header-actions {
@@ -377,6 +397,22 @@ h4 {
 /* ─────────────────────────────────────────────────────────────────────────────
    Hero Section
 ───────────────────────────────────────────────────────────────────────────── */
+.full-width-poster {
+  width: min(calc(100% - clamp(32px, 6vw, 128px)), 1440px);
+  margin: clamp(32px, 4vw, 56px) auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
 .hero {
   position: relative;
   display: block;
@@ -2664,8 +2700,11 @@ h4 {
   .site-nav a {
     min-height: 38px;
     padding: 10px 12px;
+    margin: 0;
+    border-radius: 0;
     border-top: 1px solid rgba(255,255,255,0.24);
     white-space: normal;
+    transform: none !important;
   }
 
   .submenu,
@@ -2680,7 +2719,9 @@ h4 {
 
   .submenu a {
     min-height: 34px;
-    padding-left: 24px;
+    padding: 10px 12px 10px 24px;
+    margin: 0;
+    border-radius: 0;
     color: #FFFFFF;
     border-bottom: 0;
     background: transparent;
@@ -4062,6 +4103,17 @@ details + details {
   border: 0;
 }
 
+
+.header-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(calc(100% - 32px), var(--container-wide));
+  margin: 0 auto;
+  padding: 10px 0;
+}
+/*
 .header-masthead {
   display: grid;
   grid-template-columns: auto minmax(280px, 560px) auto;
@@ -4070,7 +4122,7 @@ details + details {
   width: min(calc(100% - 32px), var(--container-wide));
   margin: 0 auto;
   padding: 10px 0;
-}
+}*/
 /*
 .brand {
   width: auto;
@@ -4133,22 +4185,39 @@ details + details {
 
 .site-search {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
   align-items: stretch;
-  min-width: 0;
-  padding: 0;
-  border: 1px solid #9CB7D5;
+  justify-content: flex-end;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.site-search.is-expanded {
   background: #FFFFFF;
+  border-color: #9CB7D5;
 }
 
 .site-search input {
+  width: 0;
+  flex: 0 0 0px;
   min-width: 0;
   min-height: 40px;
   border: 0;
-  padding: 9px 12px;
+  padding: 0;
   color: var(--ink);
   font: 400 0.92rem/1.35 Arial, Verdana, sans-serif;
+  background: transparent;
+  opacity: 0;
+  transition: flex 0.3s ease, width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+}
+
+.site-search.is-expanded input {
+  width: 220px;
+  flex: 1 1 auto;
+  padding: 9px 12px;
+  opacity: 1;
 }
 
 .site-search input:focus {
@@ -4159,13 +4228,21 @@ details + details {
 
 .site-search button {
   min-height: 40px;
+  flex: 0 0 auto;
   border: 0;
-  border-left: 1px solid #9CB7D5;
+  border-left: 1px solid transparent;
   background: var(--dark-blue);
   color: #FFFFFF;
   padding: 0 16px;
   font: 700 0.88rem/1 Arial, Verdana, sans-serif;
   cursor: pointer;
+  border-radius: 4px;
+  transition: border-radius 0.3s ease, border-color 0.3s ease;
+}
+
+.site-search.is-expanded button {
+  border-radius: 0 4px 4px 0;
+  border-left-color: #9CB7D5;
 }
 
 .search-results {
@@ -4233,7 +4310,6 @@ details + details {
 
 .nav-menu {
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .nav-menu > li {
@@ -4244,7 +4320,21 @@ details + details {
   min-width: 0;
 }
 
-.hero {
+.site-header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.hero-banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*.hero {
   display: block;
   margin-top: 22px;
   padding: clamp(24px, 3.5vw, 42px);
@@ -4315,7 +4405,7 @@ details + details {
   color: var(--dark-blue);
   padding: 10px 12px;
   font: 700 0.82rem/1.35 Arial, Verdana, sans-serif;
-}
+}*/
 
 .our-sponsors {
   display: grid;

@@ -34,7 +34,7 @@ export const conference = {
     },
     {
       label: "Paper submission deadline",
-      date: "15 September 2026",
+      date: "20 September 2026",
       note: "Authors should submit full papers before the deadline.",
     },
     {
@@ -369,6 +369,12 @@ export const conference = {
           image: "./assets/faculty/anish-mathuria.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/anish-mathuria",
           bio: "Professor at Dhirubhai Ambani University specializing in network security, privacy-preserving computation, system security, and cryptography.",
+        },
+        {
+          name: "Manish Chaturvedi",
+          institute: "Dhirubhai Ambani University",
+          image: "./assets/faculty/PROF-MANISH_CHATURVEDI.jpg",
+          infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
         },
         {
           name: "Biswajit Mishra",

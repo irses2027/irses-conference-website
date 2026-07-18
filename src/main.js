@@ -602,6 +602,11 @@ searchInput?.addEventListener("input", renderSearchResults);
 
 searchForm?.addEventListener("submit", (event) => {
   event.preventDefault();
+  if (!searchForm.classList.contains("is-expanded")) {
+    searchForm.classList.add("is-expanded");
+    searchInput.focus();
+    return;
+  }
   const firstMatch = getSearchMatches(searchInput.value)[0];
   if (firstMatch) goToSearchResult(firstMatch.id);
 });
@@ -615,6 +620,9 @@ searchResults?.addEventListener("click", (event) => {
 searchInput?.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeSearchResults();
+    if (searchInput.value.trim() === "") {
+      searchForm.classList.remove("is-expanded");
+    }
     searchInput.blur();
   }
 });
@@ -622,6 +630,9 @@ searchInput?.addEventListener("keydown", (event) => {
 document.addEventListener("click", (event) => {
   if (!searchForm?.contains(event.target)) {
     closeSearchResults();
+    if (searchInput?.value.trim() === "") {
+      searchForm?.classList.remove("is-expanded");
+    }
   }
 });
 
