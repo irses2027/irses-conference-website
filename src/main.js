@@ -323,7 +323,7 @@ const feeGroups = [
     isMatch: (category) => category.includes("student"),
   },
   {
-    title: "Regulars",
+    title: "Regular",
     description: "Full conference registration for regular delegates.",
     isMatch: (category) => !category.includes("student"),
   },
