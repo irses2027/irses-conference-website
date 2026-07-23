@@ -390,24 +390,42 @@ const participantTypes = {
   },
 };
 
+// const feeGroups = [
+//   {
+//     title: "Students",
+//     description: "Reduced conference registration for enrolled students.",
+//     isMatch: (category) => category.includes("student"),
+//   },
+//   {
+//     title: "Regular",
+//     description: "Full conference registration for regular delegates.",
+//     isMatch: (category) => !category.includes("student"),
+//   },
+// ];
 const feeGroups = [
-  {
-    title: "Students",
-    description: "Reduced conference registration for enrolled students.",
-    isMatch: (category) => category.includes("student"),
-  },
   {
     title: "Regular",
     description: "Full conference registration for regular delegates.",
     isMatch: (category) => !category.includes("student"),
   },
+  {
+    title: "Students",
+    description: "Reduced conference registration for enrolled students.",
+    isMatch: (category) => category.includes("student"),
+  },
 ];
 
+// const membershipOrder = [
+//   "IEEE Member",
+//   "IEEE Women Member",
+//   "Non-IEEE Member",
+//   "Non-IEEE Women Member",
+// ];
 const membershipOrder = [
-  "IEEE Member",
   "IEEE Women Member",
-  "Non-IEEE Member",
+  "IEEE Member",
   "Non-IEEE Women Member",
+  "Non-IEEE Member",
 ];
 
 let selectedCurrency = "inr";
