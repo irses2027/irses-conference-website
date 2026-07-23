@@ -5468,7 +5468,8 @@ a.nav-cta {
 
 .track-card {
   display: block;
-  background: var(--brand-jet-black);
+  /* background: var(--brand-jet-black); */
+   background: linear-gradient(160deg, #0B1E33, #123A5C);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
   padding: clamp(22px, 3vw, 36px);
@@ -5532,16 +5533,26 @@ a.nav-cta {
   max-width: 760px;
 }
 
-.track-scope-list {
+/* .track-scope-list {
   list-style: none;
   margin: 0;
   padding: 0;
   color: rgba(250,250,250,0.8);
   transition: max-height 220ms ease, margin 220ms ease;
+} */
+.track-scope-list {
+  list-style: none;
+  margin: 0 0 6px;
+  padding: 0;
+  color: #FAFAFA !important;
 }
 
-.track-scope-list[data-collapsed="true"] { max-height: 0; overflow: hidden; margin: 0; }
-.track-scope-list[data-collapsed="false"] { max-height: 1000px; margin-bottom: 16px; }
+.track-scope-list li {
+  color: #FAFAFA !important;
+}
+
+/* .track-scope-list[data-collapsed="true"] { max-height: 0; overflow: hidden; margin: 0; } */
+/* .track-scope-list[data-collapsed="false"] { max-height: 1000px; margin-bottom: 16px; } */
 
 .track-scope-list li {
   padding: 4px 0 4px 16px;
@@ -5560,7 +5571,7 @@ a.nav-cta {
   background: var(--brand-light-blue);
 }
 
-.track-toggle {
+/* .track-toggle {
   background: none;
   border: 1px solid var(--brand-light-blue);
   color: var(--brand-light-blue);
@@ -5571,4 +5582,4 @@ a.nav-cta {
   cursor: pointer;
 }
 
-.track-toggle:hover { background: rgba(103,186,244,0.12); }
+.track-toggle:hover { background: rgba(103,186,244,0.12); } */
