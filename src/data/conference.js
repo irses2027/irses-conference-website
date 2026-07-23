@@ -60,6 +60,9 @@ export const conference = {
   tracks: [
     {
       title: "AI and Data-Driven Energy Systems",
+      audience: ["AI/ML Researchers", "Data Scientists", "Energy Engineers", "PhD Scholars"],
+      overview:
+        "How can intelligent algorithms make tomorrow's energy grids smarter, cleaner, and more predictable? This track invites research at the intersection of AI and energy systems — from forecasting and optimization to trustworthy, explainable models for real-world deployment.",
       scope: [
         "Machine learning for energy forecasting, optimization, and control",
         "Foundation models and multimodal learning for energy data",
@@ -70,6 +73,9 @@ export const conference = {
     },
     {
       title: "Cyber-Physical and IoT-Enabled Energy Infrastructure",
+      audience: ["IoT Engineers", "Grid Engineers", "Cybersecurity Researchers", "Systems Architects"],
+      overview:
+        "Modern energy infrastructure is becoming a network of sensors, controllers, and connected devices. This track focuses on the systems that sense, secure, and manage that infrastructure in real time — from smart grids and digital twins to the cybersecurity that keeps them resilient.",
       scope: [
         "Smart grids and cyber-physical energy systems",
         "IoT architectures for sensing, monitoring, and control",
@@ -80,6 +86,9 @@ export const conference = {
     },
     {
       title: "Resilient, Decentralized, and Market-Driven Energy Systems",
+      audience: ["Power System Researchers", "Energy Economists", "Policy Analysts", "Grid Operators"],
+      overview:
+        "As energy systems become more distributed, they also need to become more resilient — able to withstand shocks, adapt to changing demand, and operate fairly across markets. This track covers the technical, economic, and policy dimensions of building that kind of grid.",
       scope: [
         "Grid resilience under climate and extreme events",
         "Distributed energy resources (DERs) and microgrids",
@@ -90,6 +99,9 @@ export const conference = {
     },
     {
       title: "Sustainable Energy Technologies and Circular Systems",
+      audience: ["Renewable Energy Researchers", "Materials Scientists", "Sustainability Engineers", "Industry Practitioners"],
+      overview:
+        "From solar and hydrogen to storage and circular design, this track brings together research on the technologies that will power a lower-carbon future — and the lifecycle thinking needed to make them sustainable at scale.",
       scope: [
         "Renewable energy systems including solar, wind, hydrogen, and hybrid systems",
         "Energy storage technologies and optimization",
@@ -104,6 +116,9 @@ export const conference = {
     },
     {
       title: "Energy Efficient and Secure Hardware Architecture for Edge AI Systems",
+      audience: ["VLSI Designers", "Embedded Systems Engineers", "Hardware Researchers", "Edge AI Developers"],
+      overview:
+        "Running AI at the edge means doing more with less power, less area, and less trust in the surrounding environment. This track covers the hardware architectures — from low-power VLSI to neuromorphic design — that make secure, efficient edge intelligence possible.",
       scope: [
         "Quantum-inspired and next-generation hardware",
         "In-memory computing for AI",
