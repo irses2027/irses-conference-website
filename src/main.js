@@ -129,7 +129,38 @@ if (tracks) {
         .map((item) => `<li>${html(item)}</li>`)
         .join("");
 
-      return `
+//       return `
+//         <article class="track-card">
+//           <div class="track-card-header">
+//             <span class="track-pill-number">Track ${num}</span>
+//             <span class="track-pill-title">${html(track.title)}</span>
+//           </div>
+//           <div class="track-tags">${tags}</div>
+//           <div class="track-body">
+//             <h3>Overview</h3>
+//             ${track.overview ? `<p>${html(track.overview)}</p>` : ""}
+//             <ul class="track-scope-list" data-collapsed="true">${scopeItems}</ul>
+//             <button type="button" class="track-toggle" data-track-toggle>
+//               View more <span aria-hidden="true">▾</span>
+//             </button>
+//           </div>
+//         </article>
+//       `;
+//     })
+//     .join("");
+
+//   tracks.querySelectorAll("[data-track-toggle]").forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       const list = btn.parentElement.querySelector(".track-scope-list");
+//       const collapsed = list.dataset.collapsed === "true";
+//       list.dataset.collapsed = collapsed ? "false" : "true";
+//       btn.innerHTML = collapsed
+//         ? 'View less <span aria-hidden="true">▴</span>'
+//         : 'View more <span aria-hidden="true">▾</span>';
+//     });
+//   });
+// }
+return `
         <article class="track-card">
           <div class="track-card-header">
             <span class="track-pill-number">Track ${num}</span>
@@ -137,29 +168,13 @@ if (tracks) {
           </div>
           <div class="track-tags">${tags}</div>
           <div class="track-body">
-            <h3>Overview</h3>
             ${track.overview ? `<p>${html(track.overview)}</p>` : ""}
-            <ul class="track-scope-list" data-collapsed="true">${scopeItems}</ul>
-            <button type="button" class="track-toggle" data-track-toggle>
-              View more <span aria-hidden="true">▾</span>
-            </button>
+            <ul class="track-scope-list">${scopeItems}</ul>
           </div>
         </article>
       `;
     })
     .join("");
-
-  tracks.querySelectorAll("[data-track-toggle]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const list = btn.parentElement.querySelector(".track-scope-list");
-      const collapsed = list.dataset.collapsed === "true";
-      list.dataset.collapsed = collapsed ? "false" : "true";
-      btn.innerHTML = collapsed
-        ? 'View less <span aria-hidden="true">▴</span>'
-        : 'View more <span aria-hidden="true">▾</span>';
-    });
-  });
-}
 
 /* ─── Author guidelines ───────────────────────────────────────────────────── */
 text("[data-author-eyebrow]", conference.authorGuidelines.eyebrow);
