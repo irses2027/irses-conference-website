@@ -3,8 +3,10 @@
 ───────────────────────────────────────────────────────────────────────────── */
 :root {
   /* IEEE conference palette */
-  --primary-blue: #0A4E9B;
-  --dark-blue:    #003366;
+  /* --primary-blue: #0A4E9B; */
+  /* --dark-blue:    #003366; */
+  --primary-blue: #1E466B;
+  --dark-blue:    #143452;
   --light-blue:   #DDEEFF;
   --white:        #FFFFFF;
   --light-grey:   #F5F5F5;
@@ -48,6 +50,11 @@
   --container-wide: 1280px;
   --font-heading: Georgia, "Times New Roman", Times, serif;
   --font-body: Arial, Verdana, sans-serif;
+   /* Brand palette */
+  --brand-bold-blue:  #1E466B;
+  --brand-light-blue: #67BAF4;
+  --brand-soft-white: #FAFAFA;
+  --brand-jet-black:  #0D0D0D;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -86,7 +93,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body::selection { background: var(--light-blue); }
@@ -4849,10 +4856,13 @@ img {
    ========================================================================== */
 
 /* 1. Global Resets & Fluid Typography */
-html, body {
+/* html, body {
   max-width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
+} */
+main {
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -5161,16 +5171,6 @@ a.nav-cta {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   REDESIGN OVERRIDES — layout & UX pass
-   1. Header: single-line nav, stays fixed to top while scrolling
-   2. Hero action bar (Paper Submission / Registration / Program): wider, bolder
-   3. About section: quick links centered as a row below the intro copy
-   4. Tracks: full-width balanced grid instead of a narrow right-hand column
-═══════════════════════════════════════════════════════════════════════════ */
-
-/* ── 1. Header & Navigation ─────────────────────────────────────────────── */
-
 .site-header {
   position: sticky !important;
   top: 0;
@@ -5186,7 +5186,7 @@ a.nav-cta {
 
   .site-nav { width: 100%; }
 
-  .nav-menu {
+  /* .nav-menu {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
@@ -5196,9 +5196,18 @@ a.nav-cta {
     min-height: 56px;
     overflow-x: auto;
     scrollbar-width: none;
-  }
+  } */
+   .nav-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 56px;
+}
 
-  .nav-menu::-webkit-scrollbar { display: none; }
+  /* .nav-menu::-webkit-scrollbar { display: none; } */
 
   .nav-menu > li { flex: 0 0 auto; }
 
@@ -5215,7 +5224,6 @@ a.nav-cta {
   }
 }
 
-/* ── 2. Hero action bar (below the banner image) ───────────────────────── */
 
 .hero {
   padding-top: clamp(30px, 4vw, 48px) !important;
@@ -5258,7 +5266,6 @@ a.nav-cta {
   .hero-actions { grid-template-columns: 1fr; max-width: 480px; }
 }
 
-/* ── 3. About Conference: centered action row beneath the intro copy ──── */
 
 .intro-grid {
   display: block;
@@ -5320,8 +5327,6 @@ a.nav-cta {
   .intro-section .quick-links { flex-direction: column; align-items: stretch; }
   .intro-section .quick-links a { justify-content: center; }
 }
-
-/* ── 4. Tracks: balanced, full-width card grid ─────────────────────────── */
 
 .track-layout {
   display: block;
