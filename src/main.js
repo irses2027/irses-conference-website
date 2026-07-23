@@ -50,41 +50,115 @@ if (logos) {
 }
 
 /* ─── Important Dates — vertical timeline ─────────────────────────────────── */
+// const dates = document.querySelector("[data-important-dates]");
+// if (dates) {
+//   dates.innerHTML = conference.importantDates
+//     .map(
+//       (item) => `
+//     <article class="date-card">
+//       <div class="date-card-inner">
+//         <p>${html(item.label)}</p>
+//         <strong>${html(item.date)}</strong>
+//         <span>${html(item.note)}</span>
+//       </div>
+//     </article>
+//   `,
+//     )
+//     .join("");
+// }
+
+const timelineIcons = {
+  registration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>`,
+  upload: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>`,
+  check: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>`,
+  calendar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>`,
+};
+
+const pickTimelineIcon = (label = "") => {
+  const key = label.toLowerCase();
+  if (key.includes("regist")) return timelineIcons.registration;
+  if (key.includes("submission")) return timelineIcons.upload;
+  if (key.includes("accept")) return timelineIcons.check;
+  return timelineIcons.calendar;
+};
+
 const dates = document.querySelector("[data-important-dates]");
 if (dates) {
   dates.innerHTML = conference.importantDates
     .map(
       (item) => `
-    <article class="date-card">
-      <div class="date-card-inner">
-        <p>${html(item.label)}</p>
-        <strong>${html(item.date)}</strong>
-        <span>${html(item.note)}</span>
-      </div>
-    </article>
+    <div class="timeline-item">
+      <div class="timeline-icon">${pickTimelineIcon(item.label)}</div>
+      <div class="timeline-dot"></div>
+      <p class="timeline-label">${html(item.label)}</p>
+      <span class="timeline-date">${html(item.date)}</span>
+    </div>
   `,
     )
     .join("");
 }
 
 /* ─── Technical Tracks ─────────────────────────────────────────────────────── */
+// const tracks = document.querySelector("[data-tracks]");
+// if (tracks) {
+//   tracks.innerHTML = conference.tracks
+//     .map(
+//       (track, index) => `
+//     <article class="track-card">
+//       <span class="track-number">${String(index + 1).padStart(2, "0")}</span>
+//       <div class="track-content">
+//         <h3>${html(track.title)}</h3>
+//         <ul>
+//           ${track.scope.map((item) => `<li>${html(item)}</li>`).join("")}
+//         </ul>
+//       </div>
+//     </article>
+//   `,
+//     )
+//     .join("");
+// }
 const tracks = document.querySelector("[data-tracks]");
 if (tracks) {
   tracks.innerHTML = conference.tracks
-    .map(
-      (track, index) => `
-    <article class="track-card">
-      <span class="track-number">${String(index + 1).padStart(2, "0")}</span>
-      <div class="track-content">
-        <h3>${html(track.title)}</h3>
-        <ul>
-          ${track.scope.map((item) => `<li>${html(item)}</li>`).join("")}
-        </ul>
-      </div>
-    </article>
-  `,
-    )
+    .map((track, index) => {
+      const num = String(index + 1).padStart(2, "0");
+      const tags = (track.audience || [])
+        .map((tag) => `<span class="track-tag">${html(tag)}</span>`)
+        .join("");
+      const scopeItems = track.scope
+        .map((item) => `<li>${html(item)}</li>`)
+        .join("");
+
+      return `
+        <article class="track-card">
+          <div class="track-card-header">
+            <span class="track-pill-number">Track ${num}</span>
+            <span class="track-pill-title">${html(track.title)}</span>
+          </div>
+          <div class="track-tags">${tags}</div>
+          <div class="track-body">
+            <h3>Overview</h3>
+            ${track.overview ? `<p>${html(track.overview)}</p>` : ""}
+            <ul class="track-scope-list" data-collapsed="true">${scopeItems}</ul>
+            <button type="button" class="track-toggle" data-track-toggle>
+              View more <span aria-hidden="true">▾</span>
+            </button>
+          </div>
+        </article>
+      `;
+    })
     .join("");
+
+  tracks.querySelectorAll("[data-track-toggle]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const list = btn.parentElement.querySelector(".track-scope-list");
+      const collapsed = list.dataset.collapsed === "true";
+      list.dataset.collapsed = collapsed ? "false" : "true";
+      btn.innerHTML = collapsed
+        ? 'View less <span aria-hidden="true">▴</span>'
+        : 'View more <span aria-hidden="true">▾</span>';
+    });
+  });
 }
 
 /* ─── Author guidelines ───────────────────────────────────────────────────── */
@@ -698,3 +772,113 @@ updateScrollState();
 
 /* ─── Static homepage sections ─────────────────────────────────────────────── */
 document.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
+
+/* ── Tracks: dark cards matching reference design ───────────────────── */
+.track-grid { grid-template-columns: 1fr !important; gap: 24px; }
+
+.track-card {
+  display: block;
+  background: var(--brand-jet-black);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: clamp(22px, 3vw, 36px);
+}
+
+.track-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.track-pill-number {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--brand-soft-white);
+  color: var(--brand-soft-white);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.track-pill-title {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-bold-blue), var(--brand-light-blue));
+  color: var(--brand-soft-white);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.track-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.track-tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(250,250,250,0.35);
+  color: var(--brand-soft-white);
+  font-size: 0.78rem;
+}
+
+.track-body h3 {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--brand-light-blue);
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.track-body p {
+  color: rgba(250,250,250,0.85);
+  margin: 0 0 16px;
+  max-width: 760px;
+}
+
+.track-scope-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgba(250,250,250,0.8);
+  transition: max-height 220ms ease, margin 220ms ease;
+}
+
+.track-scope-list[data-collapsed="true"] { max-height: 0; overflow: hidden; margin: 0; }
+.track-scope-list[data-collapsed="false"] { max-height: 1000px; margin-bottom: 16px; }
+
+.track-scope-list li {
+  padding: 4px 0 4px 16px;
+  position: relative;
+  font-size: 0.92rem;
+}
+
+.track-scope-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand-light-blue);
+}
+
+.track-toggle {
+  background: none;
+  border: 1px solid var(--brand-light-blue);
+  color: var(--brand-light-blue);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.track-toggle:hover { background: rgba(103,186,244,0.12); }
