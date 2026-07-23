@@ -5356,3 +5356,109 @@ a.nav-cta {
   grid-template-columns: 44px minmax(0, 1fr);
   height: 100%;
 }
+
+/* ── Important Dates: horizontal icon timeline ──────────────────────── */
+#dates .section-heading { text-align: center; max-width: 100%; }
+#dates .section-heading::after { margin-left: auto; margin-right: auto; }
+#dates .section-heading h2 {
+  font-style: italic;
+  text-transform: none;
+  color: var(--brand-bold-blue);
+}
+
+.date-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: clamp(16px, 3vw, 32px);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 70px 8px 24px;
+  border: none;
+  background: none;
+  box-shadow: none;
+  scrollbar-width: none;
+}
+
+.date-grid::-webkit-scrollbar { display: none; }
+.date-grid::before { display: none; }
+
+.timeline-item {
+  position: relative;
+  flex: 0 0 190px;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--brand-light-blue), var(--brand-bold-blue));
+  color: #fff;
+}
+
+.timeline-icon svg { width: 26px; height: 26px; }
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: rgba(30, 70, 107, 0.25);
+}
+
+.timeline-item:last-child::after { display: none; }
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brand-bold-blue);
+  margin: 0 auto 14px;
+  position: relative;
+}
+
+.timeline-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+  min-height: 42px;
+  color: var(--ink);
+}
+
+.timeline-date {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.timeline-item:nth-child(odd) .timeline-date { background: var(--brand-bold-blue); }
+.timeline-item:nth-child(even) .timeline-date { background: var(--brand-light-blue); color: var(--brand-jet-black); }
+
+@media (min-width: 1100px) {
+  .intro-section .quick-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: center;
+    scrollbar-width: none;
+  }
+  .intro-section .quick-links::-webkit-scrollbar { display: none; }
+  .intro-section .quick-links a {
+    font-size: 0.85rem;
+    padding: 12px 16px;
+    white-space: nowrap;
+  }
+}
