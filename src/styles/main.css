@@ -5160,3 +5160,194 @@ a.nav-cta {
     max-width: 22vw !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   REDESIGN OVERRIDES — layout & UX pass
+   1. Header: single-line nav, stays fixed to top while scrolling
+   2. Hero action bar (Paper Submission / Registration / Program): wider, bolder
+   3. About section: quick links centered as a row below the intro copy
+   4. Tracks: full-width balanced grid instead of a narrow right-hand column
+═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── 1. Header & Navigation ─────────────────────────────────────────────── */
+
+.site-header {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #FFFFFF;
+  box-shadow: 0 2px 14px rgba(10, 40, 80, 0.08);
+}
+
+@media (min-width: 1181px) {
+  .nav-row { padding: 0 16px; }
+
+  .site-nav { width: 100%; }
+
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 56px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-menu::-webkit-scrollbar { display: none; }
+
+  .nav-menu > li { flex: 0 0 auto; }
+
+  .site-nav a {
+    padding: 0 clamp(8px, 1vw, 15px);
+    margin: 0 1px;
+    font-size: clamp(0.78rem, 0.95vw, 0.94rem);
+    white-space: nowrap;
+    min-height: 40px;
+  }
+
+  .has-submenu > a::after {
+    margin-left: 6px;
+  }
+}
+
+/* ── 2. Hero action bar (below the banner image) ───────────────────────── */
+
+.hero {
+  padding-top: clamp(30px, 4vw, 48px) !important;
+  padding-bottom: clamp(30px, 4vw, 48px) !important;
+}
+
+.hero-content { max-width: 100%; }
+
+.hero-actions {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.2vw, 28px);
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto !important;
+}
+
+.hero-actions .button {
+  width: 100%;
+  min-height: 66px !important;
+  padding: 14px 20px !important;
+  border-radius: 8px;
+  font-size: clamp(1rem, 1.3vw, 1.2rem) !important;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.hero-actions .button.primary {
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.22);
+}
+
+.hero-actions .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(10, 78, 155, 0.2);
+}
+
+@media (max-width: 720px) {
+  .hero-actions { grid-template-columns: 1fr; max-width: 480px; }
+}
+
+/* ── 3. About Conference: centered action row beneath the intro copy ──── */
+
+.intro-grid {
+  display: block;
+}
+
+.intro-section .lead-copy {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.intro-section .quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12px;
+  max-width: 1040px;
+  margin: 36px auto 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.intro-section .quick-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border: 1px solid var(--accent-line-soft);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--accent-line-soft);
+}
+
+.intro-section .quick-links a:hover {
+  background: var(--accent-surface);
+  color: var(--accent-strong);
+  padding-left: 22px;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(10, 78, 155, 0.14);
+}
+
+.intro-section .quick-links a.nav-cta {
+  background: var(--navy);
+  color: #FFFFFF;
+  border-color: var(--navy);
+  border-radius: 999px;
+}
+
+.intro-section .quick-links a.nav-cta:hover {
+  background: #003366;
+  padding-left: 22px;
+}
+
+@media (max-width: 560px) {
+  .intro-section .quick-links { flex-direction: column; align-items: stretch; }
+  .intro-section .quick-links a { justify-content: center; }
+}
+
+/* ── 4. Tracks: balanced, full-width card grid ─────────────────────────── */
+
+.track-layout {
+  display: block;
+}
+
+.track-intro {
+  position: static;
+  max-width: 760px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.track-intro::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.track-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+}
+
+@media (min-width: 900px) {
+  .track-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+.track-card {
+  grid-template-columns: 44px minmax(0, 1fr);
+  height: 100%;
+}
