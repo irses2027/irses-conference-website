@@ -175,6 +175,7 @@ return `
       `;
     })
     .join("");
+}
 
 /* ─── Author guidelines ───────────────────────────────────────────────────── */
 text("[data-author-eyebrow]", conference.authorGuidelines.eyebrow);
