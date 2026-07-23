@@ -30,7 +30,7 @@ export const conference = {
     {
       label: "Paper submission opens",
       date: "20 July 2026",
-      note: "Submission portal details will be announced soon.",
+     
     },
     {
       label: "Paper submission deadline",
