@@ -30,7 +30,7 @@ export const conference = {
     {
       label: "Paper submission opens",
       date: "20 July 2026",
-     
+      link: "https://edas.info/N35610",
     },
     {
       label: "Paper submission deadline",

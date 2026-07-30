@@ -87,7 +87,8 @@ const dates = document.querySelector("[data-important-dates]");
 if (dates) {
   dates.innerHTML = conference.importantDates
     .map(
-      (item, index) => `
+      (item, index) => {
+        const tile = `
     <article class="date-tile">
       <div class="date-tile-top">
         <span class="date-tile-icon">${pickTimelineIcon(item.label)}</span>
@@ -95,8 +96,12 @@ if (dates) {
       </div>
       <p class="date-tile-label">${html(item.label)}</p>
       <p class="date-tile-value">${html(item.date)}</p>
-    </article>
-  `,
+    </article>`;
+        if (item.link) {
+          return `<a href="${item.link}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">${tile}</a>`;
+        }
+        return tile;
+      },
     )
     .join("");
 }
