@@ -5,133 +5,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="IRSES 2027 conference website starter for academic event information, submissions, registration, venue, committees, and contact details." />
-  <title>IRSES 2027 | Conference Website</title>
-  <link rel="stylesheet" href="./src/styles/main.css?v=2" />
+    content="IRSES 2027 — IEEE International Conference on Intelligent, Resilient, and Sustainable Energy Systems, 19–21 February 2027, Dhirubhai Ambani University, Gandhinagar, India." />
+  <title>IRSES 2027 | Intelligent, Resilient & Sustainable Energy Systems</title>
+  <link rel="stylesheet" href="./src/styles/main.css?v=11" />
 </head>
 
-<body>
-  <!-- Scroll progress -->
-  <div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
-  <header class="site-header" data-header>
-    <div class="header-masthead">
-
-      <!--  <a class="brand" href="#welcome" aria-label="IRSES 2027 home">
-          <span class="brand-logos" aria-hidden="true">
-            <img class="brand-logo" src="./assets/ieee-gujarat-section.png" alt="" />
-            <img class="brand-logo" src="./assets/dau-logo.jpg" alt="" />
-        
-            <span class="conference-mark">IRSES<br />2027</span>
-          </span>
-        </a> -->
-
-      <div class="brand-logos">
-
-        <a href="https://ieeegujaratsection.org/" target="_blank" rel="noopener noreferrer">
-          <img class="brand-logo" src="./assets/ieee-gujarat-section.png" alt="IEEE Gujarat Section" />
-        </a>
-
-        <a href="https://www.daiict.ac.in/" target="_blank" rel="noopener noreferrer">
-          <img class="brand-logo" src="./assets/dau-logo.jpg" alt="Dhirubhai Ambani University" />
-        </a>
-
-        <a href="#welcome" aria-label="IRSES 2027 Home">
-          <span class="conference-mark">
-            IRSES<br />2027
-          </span>
-        </a>
-
-      </div>
-
-      <form class="site-search" role="search" data-site-search>
-        <label class="sr-only" for="site-search-input">Search conference website</label>
-        <input id="site-search-input" type="search" autocomplete="off" placeholder="Search the conference website"
-          data-search-input />
-        <button type="submit" aria-label="Search">Search</button>
-        <div class="search-results" data-search-results hidden></div>
-      </form>
-
-      <!-- <img class="ieee-master-logo" src="./assets/ieee-logo.png" alt="IEEE" />-->
-    </div>
-
-    <div class="nav-row">
-      <button class="menu-button" type="button" data-menu-button aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="site-nav" data-nav aria-label="Primary navigation">
-        <ul class="nav-menu">
-          <li><a href="#welcome">Welcome</a></li>
-          <li><a href="#announcements">Announcements</a></li>
-          <li><a href="#about">About</a></li>
-          <li class="has-submenu">
-            <a href="#dates">Program</a>
-            <ul class="submenu">
-              <li><a href="#dates">Important Dates</a></li>
-              <li><a href="#scope">Scope</a></li>
-              <li><a href="#call-for-papers">Call for Papers</a></li>
-              <li><a href="#tracks">Tracks</a></li>
-              <li><a href="#registration">Registration</a></li>
-            </ul>
-          </li>
-          <li><a href="#publication">Publication</a></li>
-          <li><a href="#committees">Committees</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
-          <li><a class="nav-cta" href="#registration">Registration</a></li>
-          <li class="has-submenu">
-            <a href="#venue">Venue</a>
-            <ul class="submenu">
-              <li><a href="#venue">Host Campus</a></li>
-              <li><a href="#downloads">Downloads</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+<body data-page="index" id="top">
   <main>
     <section class="full-width-poster">
-      <img src="./assets/hero-poster.jpeg" alt="IRSES 2027 Conference Banner" />
+      <img src="./assets/hero-poster.jpeg" alt="IRSES 2027 Conference Banner" width="1440" height="620" />
     </section>
 
     <section class="hero" id="welcome" aria-labelledby="hero-title">
       <div class="hero-layout">
         <div class="hero-content">
+          <p class="hero-kicker">Welcome</p>
+          <h1 id="hero-title">International Conference on Intelligent, Resilient, and Sustainable Energy Systems</h1>
+          <p class="hero-conference-code">(IRSES 2027)</p>
 
-          <!--
-            <p class="hero-kicker">Welcome</p>
-            <h1 id="hero-title">International Conference on Intelligent, Resilient, and Sustainable Energy Systems</h1>
-            <p class="hero-conference-code">(IRSES 2027)</p>
-
-            <dl class="hero-details" aria-label="Conference details">
-              <div>
-                <dt>Dates</dt>
-                <dd data-event-dates></dd>
-              </div>
-              <div>
-                <dt>Venue</dt>
-                <dd data-event-venue></dd>
-              </div>
-            </dl>-->
+          <dl class="hero-details" aria-label="Conference details">
+            <div>
+              <dt>Dates</dt>
+              <dd data-event-dates></dd>
+            </div>
+            <div>
+              <dt>Venue</dt>
+              <dd data-event-venue></dd>
+            </div>
+          </dl>
 
           <div class="hero-actions" aria-label="Conference actions">
-
             <a class="button primary" href="https://edas.info/N35610" target="_blank" rel="noopener noreferrer">
               Paper Submission
             </a>
-
-            <a class="button secondary" href="#registration">Registration</a>
-
-            <a class="button secondary" href="#dates">Program</a>
+            <a class="button secondary" href="registration.html">Registration</a>
+            <a class="button secondary" href="call-for-papers.html">Program</a>
           </div>
         </div>
-
-
       </div>
     </section>
 
@@ -142,7 +52,6 @@
       <div class="classic-box news-panel">
         <ul class="classic-list">
           <li>Paper submission opens on 20 July 2026.</li>
-          <!-- <li>Registration, brochure, and programme downloads will be updated as released by the committee.</li> -->
         </ul>
       </div>
     </section>
@@ -151,7 +60,7 @@
       <div class="section-heading">
         <h2>Important Dates</h2>
       </div>
-      <div class="date-grid reveal" data-important-dates></div>
+      <div class="dates-board reveal" data-important-dates></div>
     </section>
 
     <section class="section intro-section reveal" id="about">
@@ -161,221 +70,21 @@
       <div class="intro-grid">
         <article class="lead-copy">
           <p data-event-description></p>
-          <p data-event-purpose></p>
         </article>
-        <div class="quick-links" aria-label="Conference actions">
-          <a href="#tracks">Call for Papers</a>
-          <a href="#call-for-papers">Author Guidelines</a>
-          <a class="nav-cta" href="#registration">Register</a>
-          <a href="#sponsors">Sponsorship</a>
-          <a href="#downloads">Downloads</a>
-          <a href="#committees">Committees</a>
-          <a href="#contact">Contact Secretariat</a>
+        <div class="quick-links" aria-label="Explore the conference">
+          <a href="about.html">About the Conference</a>
+          <a href="call-for-papers.html">Call for Papers</a>
+          <a class="nav-cta" href="registration.html">Register</a>
+          <a href="committees.html">Committees</a>
+          <a href="sponsors.html">Sponsorship</a>
+          <a href="venue.html">Venue &amp; Contact</a>
         </div>
       </div>
-    </section>
-
-    <section class="section classic-section" id="scope">
-      <div class="section-heading">
-        <h2>Conference Scope</h2>
-      </div>
-      <div class="classic-box information-panel">
-        <p>
-          IRSES 2027 invites work on intelligent energy technologies, resilient grids,
-          cyber-physical infrastructure, sustainable systems, efficient hardware, and
-          research connecting policy, markets, and climate-aware engineering practice.
-        </p>
-      </div>
-    </section>
-
-    <section class="section classic-section" id="call-for-papers">
-      <div class="section-heading">
-        <h2>Call for Papers</h2>
-      </div>
-      <div class="classic-box classic-two-column information-panel">
-        <p>
-          Authors are invited to submit original and unpublished research papers aligned
-          with the conference themes. Manuscripts must follow the IEEE conference format
-          and will be reviewed by the Technical Program Committee.
-        </p>
-        <div class="classic-actions">
-          <a class="button primary" href="#downloads">Submission Guidelines</a>
-          <a class="button secondary" href="#tracks">View Tracks</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="tracks">
-      <div class="track-layout">
-        <div class="section-heading track-intro">
-          <h2>Tracks</h2>
-          <p>
-            Submit original research across intelligent, resilient, and sustainable energy systems.
-          </p>
-        </div>
-        <div class="track-grid reveal" data-tracks></div>
-      </div>
-    </section>
-
-    <section class="section classic-section" id="publication">
-      <div class="section-heading">
-        <h2>Publication</h2>
-      </div>
-      <div class="classic-box information-panel">
-        <p>
-          Accepted and presented papers will be considered for submission to IEEE Xplore
-          after the conference, subject to IEEE requirements and conference quality checks.
-        </p>
-        <ul class="classic-list">
-          <li>At least one author must complete registration for each accepted paper.</li>
-          <li>Camera-ready papers must satisfy the required IEEE PDF compliance checks.</li>
-          <li>Publication is subject to peer review, presentation, copyright, and post-conference screening.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section muted registration-section reveal" id="registration">
-      <div class="section-heading registration-heading">
-        <div>
-          <h2>Registration</h2>
-          <!-- <p>Switch between Indian and Foreign participant categories.</p> -->
-        </div>
-      </div>
-      <div class="pricing-card" data-registration-pricing>
-        <div class="pricing-card-top">
-          <div>
-            <p class="pricing-kicker">Participant Category</p>
-            <h3 data-registration-audience>Indian Participant Fees</h3>
-          </div>
-          <div class="currency-toggle" role="group" aria-label="Choose registration currency">
-            <button type="button" data-currency-toggle="inr" aria-pressed="true">₹ Indian</button>
-            <button type="button" data-currency-toggle="usd" aria-pressed="false">$ Foreign</button>
-          </div>
-        </div>
-        <div class="pricing-table" role="table" aria-label="Registration fees" data-registration-fees></div>
-      </div>
-      <div class="registration-guidelines">
-        <article>
-          <h3>For Authors</h3>
-          <ol data-author-notes></ol>
-        </article>
-        <article>
-          <h3>For Attendees</h3>
-          <ol data-attendee-notes></ol>
-        </article>
-        <article class="no-show-policy">
-          <h3>No-Show Policy</h3>
-          <p data-no-show-policy></p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section classic-section" id="speakers">
-      <div class="section-heading">
-        <h2>Speakers</h2>
-      </div>
-      <div class="classic-box information-panel">
-        <p>Keynote and invited speaker details will be announced by the organizing committee.</p>
-      </div>
-    </section>
-
-    <section class="section split-section" id="committees">
-      <div class="section-heading">
-        <h2>Committee</h2>
-      </div>
-      <div class="committee-layout reveal" data-committees></div>
-    </section>
-
-    <section class="section muted sponsorship-section reveal" id="sponsors">
-      <div class="section-heading wide">
-        <div>
-          <h2>Sponsors</h2>
-        </div>
-        <p data-sponsorship-summary></p>
-      </div>
-      <div class="our-sponsors" aria-label="Our sponsors">
-        <h3>Our Sponsors</h3>
-        <div class="sponsor-card-grid">
-          <article class="sponsor-card">
-            <img src="./assets/ieee-gujarat-section.png" alt="IEEE Gujarat Section" />
-            <div>
-              <strong>IEEE Gujarat Section</strong>
-              <span>Financial Co-Sponsor</span>
-            </div>
-          </article>
-          <article class="sponsor-card">
-            <img src="./assets/smart-energy-learning-center.jpg" alt="Smart Energy Learning Center" />
-            <div>
-              <strong>SELC</strong>
-              <span>Gold Sponsor</span>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="sponsorship-intro" data-sponsorship-intro></div>
-      <div class="sponsorship-packages">
-        <div class="package-table" role="table" aria-label="Sponsorship packages" data-sponsorship-packages></div>
-        <p class="package-note" data-sponsorship-tax-note></p>
-      </div>
-      <div class="benefit-grid" data-sponsorship-benefits></div>
-      <div class="sponsorship-contact" data-sponsorship-contact></div>
-    </section>
-
-    <section class="section venue-section reveal" id="venue">
-      <div class="venue-copy">
-        <h2 data-venue-title></h2>
-        <p data-venue-description></p>
-        <p>
-          <strong>How to reach the venue:</strong> DA-IICT (Dhirubhai Ambani University) can be reached in about 30
-          minutes from Sardar Vallabhbhai Patel International Airport and Ahmedabad's Central Railway Station.
-          <a href="https://www.daiict.ac.in/about-us" target="_blank" rel="noopener noreferrer">View on the university
-            website →</a>
-        </p>
-        <p>
-          Planning to explore more of Gujarat during your visit? Check
-          <a href="https://gujarattourism.com/" target="_blank" rel="noopener noreferrer">Gujarat Tourism</a>
-          for nearby attractions and travel information.
-        </p>
-      </div>
-      <figure class="venue-media">
-        <img src="./assets/daiict-entrance.png" alt="DAU campus entrance" />
-      </figure>
-    </section>
-
-    <section class="section classic-section" id="downloads">
-      <div class="section-heading">
-        <h2>Downloads</h2>
-      </div>
-      <div class="classic-box information-panel">
-        <ul class="download-list">
-          <li><a href="#about">Conference Brochure <span>Available online</span></a></li>
-          <li><a href="#dates">Programme Schedule <span>Available online</span></a></li>
-          <li><a href="#call-for-papers">Author Instructions <span>Available online</span></a></li>
-          <li><a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">IEEE
-              Manuscript Templates <span>External link</span></a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="section-heading">
-        <h2>Contact</h2>
-      </div>
-      <div class="contact-grid reveal" data-contact></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p data-footer-copy></p>
-    <div class="footer-links">
-      <a href="#welcome">Back to top ↑</a>
-    </div>
-  </footer>
-
-  <!-- Floating back-to-top -->
-  <button class="fab-top" id="fab-top" aria-label="Back to top">↑</button>
-
-  <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/layout.js?v=10"></script>
+  <script type="module" src="./src/main.js?v=10"></script>
 </body>
 
 </html>

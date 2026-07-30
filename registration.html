@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Registration fees and guidelines for IRSES 2027 — Indian and foreign participant categories, IEEE and non-IEEE member rates, author and attendee notes." />
+  <title>Registration | IRSES 2027</title>
+  <link rel="stylesheet" href="./src/styles/main.css?v=11" />
+</head>
+
+<body data-page="registration" id="top">
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span aria-hidden="true">/</span><span>Registration</span>
+        </nav>
+        <h1>Registration</h1>
+        <p class="page-hero-sub">
+          Fees for Indian and foreign participants, with early-bird and late rates for
+          IEEE members, women members, and non-members.
+        </p>
+      </div>
+    </section>
+
+    <section class="section muted registration-section reveal" id="registration">
+      <div class="section-heading registration-heading">
+        <div>
+          <h2>Registration Fees</h2>
+        </div>
+      </div>
+      <div class="pricing-card" data-registration-pricing>
+        <div class="pricing-card-top">
+          <div>
+            <p class="pricing-kicker">Participant Category</p>
+            <h3 data-registration-audience>Indian Participant Fees</h3>
+          </div>
+          <div class="currency-toggle" role="group" aria-label="Choose registration currency">
+            <button type="button" data-currency-toggle="inr" aria-pressed="true">₹ Indian</button>
+            <button type="button" data-currency-toggle="usd" aria-pressed="false">$ Foreign</button>
+          </div>
+        </div>
+        <div class="pricing-table" role="table" aria-label="Registration fees" data-registration-fees></div>
+      </div>
+      <div class="registration-guidelines">
+        <article>
+          <h3>For Authors</h3>
+          <ol data-author-notes></ol>
+        </article>
+        <article>
+          <h3>For Attendees</h3>
+          <ol data-attendee-notes></ol>
+        </article>
+        <article class="no-show-policy">
+          <h3>No-Show Policy</h3>
+          <p data-no-show-policy></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/layout.js?v=10"></script>
+  <script type="module" src="./src/main.js?v=10"></script>
+</body>
+
+</html>
