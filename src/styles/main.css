@@ -7,14 +7,21 @@
      Secondary: Professional Blue
      Accent   : Light Blue
      Base     : Very light cool grey / white                                 */
-  --primary-blue: #0A4E9B;   /* Deep IEEE Blue — primary brand */
-  --dark-blue: #00306B;      /* Navy — headings, dark surfaces */
-  --secondary-blue: #1669B8; /* Professional Blue — links, hover, accents */
-  --light-blue: #E7F0FB;     /* Accent Light Blue — tinted surfaces */
+  --primary-blue: #0A4E9B;
+  /* Deep IEEE Blue — primary brand */
+  --dark-blue: #00306B;
+  /* Navy — headings, dark surfaces */
+  --secondary-blue: #1669B8;
+  /* Professional Blue — links, hover, accents */
+  --light-blue: #E7F0FB;
+  /* Accent Light Blue — tinted surfaces */
   --white: #FFFFFF;
-  --light-grey: #F5F7FA;     /* Very light cool grey — muted section base */
-  --border: #DDE3EC;         /* Soft cool border */
-  --text: #1B2430;           /* Near-black, slightly cool */
+  --light-grey: #F5F7FA;
+  /* Very light cool grey — muted section base */
+  --border: #DDE3EC;
+  /* Soft cool border */
+  --text: #1B2430;
+  /* Near-black, slightly cool */
 
   /* Existing semantic aliases (names preserved for backward compatibility) */
   --ink: var(--text);
@@ -6006,19 +6013,20 @@ a.nav-cta {
    column off-screen. Allow them to shrink and stack cleanly.
 ───────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
+
   .pricing-table,
   .pricing-group,
   .pricing-group-heading,
-  .pricing-group-heading > *,
+  .pricing-group-heading>*,
   .pricing-row,
-  .pricing-row > div,
+  .pricing-row>div,
   .pricing-membership,
   .pricing-price {
     min-width: 0;
   }
 
   /* Let the heading's text block take remaining space and wrap */
-  .pricing-group-heading > div {
+  .pricing-group-heading>div {
     flex: 1 1 0;
   }
 
@@ -6250,7 +6258,8 @@ a.nav-cta {
 }
 
 .date-tile {
-  display: flex;
+  min-height: 180px;
+  /* adjust until all cards match */
   flex-direction: column;
   gap: 14px;
   padding: 22px 20px;
