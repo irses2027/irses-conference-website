@@ -876,7 +876,7 @@ export const conference = {
         ],
       },
     ],
-    contact: "To secure participation, please write to us at ieee_irses@dau.ac.in.",
+    contact: "To secure participation, please write to us at ieeeirses2027@gmail.com.",
   },
   fellowship: {
     travelGrants: {
@@ -909,7 +909,7 @@ export const conference = {
     },
     {
       label: "Conference Email",
-      value: "ieee_irses@dau.ac.in",
+      value: "ieeeirses2027@gmail.com",
     },
     {
       label: "Phone",
