@@ -388,7 +388,7 @@ export const conference = {
         {
           name: "Manish Chaturvedi",
           institute: "Dhirubhai Ambani University",
-          image: "./assets/faculty/PROF-MANISH_CHATURVEDI.jpg",
+          image: "./assets/faculty/manish-chaturvedi.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
         },
         {
