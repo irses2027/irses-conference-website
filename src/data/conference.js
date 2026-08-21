@@ -795,11 +795,11 @@ export const conference = {
       "A limited number of exhibitor spaces will be available and allocated on a first-come, first-served basis. Interested organizations are encouraged to confirm participation early.",
     ],
     packages: [
-      { grade: "Title Sponsors", amount: "INR 10,00,000" },
-      { grade: "Platinum Sponsors", amount: "INR 5,00,000" },
-      { grade: "Gold Sponsors", amount: "INR 3,00,000" },
+      { grade: "Title Sponsors", amount: "INR 15,00,000" },
+      { grade: "Platinum Sponsors", amount: "INR 8,00,000" },
+      { grade: "Gold Sponsors", amount: "INR 4,00,000" },
       { grade: "Silver Sponsors", amount: "INR 2,00,000" },
-      { grade: "Academic Partners", amount: "INR 2,00,000" },
+      { grade: "Academic Partners", amount: "INR 1,00,000" },
       { grade: "Exhibitors", amount: "INR 50,000" },
     ],
     taxNote: "Amounts exclude GST at 18%.",
@@ -883,7 +883,7 @@ export const conference = {
         ],
       },
     ],
-    contact: "To secure participation, please write to us at ieeeirses2027@gmail.com.",
+    contact: "To secure participation, please write to us at irses@dau.ac.in.",
   },
   fellowship: {
     travelGrants: {
@@ -916,7 +916,7 @@ export const conference = {
     },
     {
       label: "Conference Email",
-      value: "ieeeirses2027@gmail.com",
+      value: "irses@dau.ac.in",
     },
     {
       label: "Phone",
