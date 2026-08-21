@@ -806,7 +806,7 @@ export const conference = {
     benefits: [
       {
         title: "Title Sponsors",
-        amount: "Rs. 10,00,000/- + GST (18%)",
+        amount: "Rs. 15,00,000/- + GST (18%)",
         details: [
           "Featured as the “Presented By” sponsor with visibility across PR campaigns, inaugural ceremony, social media promotions, main-stage acknowledgements, and a dedicated 10-minute presentation slot.",
          // "Special mention as Presented by, inclusion in PR activities, inaugural ceremony presence, a 10-minute presentation slot, social media mentions, main-stage panel visibility, and podium acknowledgement.",
@@ -820,7 +820,7 @@ export const conference = {
       },
       {
         title: "Platinum Sponsors",
-        amount: "Rs. 5,00,000/- + GST (18%)",
+        amount: "Rs. 8,00,000/- + GST (18%)",
         details: [
           "Sponsor recognition through main-stage visibility, podium acknowledgements, inaugural ceremony presence, gala dinner invitations, social media promotions, and conference PR activities.",
           //"Main-stage panel visibility, podium acknowledgement, inaugural ceremony presence, gala dinner invite, social media mentions, and inclusion in PR activity.",
@@ -834,7 +834,7 @@ export const conference = {
       },
       {
         title: "Gold Sponsors",
-        amount: "Rs. 3,00,000/- + GST (18%)",
+        amount: "Rs. 4,00,000/- + GST (18%)",
         details: [
           "Sponsor name and logo will be displayed across official conference promotional materials, including banners and posters.",
           //"Sponsor name and logo will appear in conference announcement materials, including banners and posters.",
@@ -862,7 +862,7 @@ export const conference = {
       },
       {
         title: "Academic Partners",
-        amount: "Rs. 2,00,000/- + GST (18%)",
+        amount: "Rs. 1,00,000/- + GST (18%)",
         details: [
           /*"This option is open to academic institutions, colleges, and universities where IEEE Student Branches exist.",
           "Partner name will be displayed in the event banner, and space up to 3m x 3m will be provided at the exhibition venue to showcase activities and innovations.",
