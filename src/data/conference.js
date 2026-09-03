@@ -348,7 +348,7 @@ export const conference = {
           bio: "Professor at Dhirubhai Ambani University specializing in cyber security, privacy, cryptography, security protocols, and algorithms.",
         },
         {
-          name: "Rajendra Jadeja",
+          name: "Dr. Rajendra Jadeja",
           institute: "Marwadi University",
           image: "./assets/faculty/rajendra_jadeja.jpeg",
          // infoLink: "https://www.daiict.ac.in/faculty/maniklal-das",
