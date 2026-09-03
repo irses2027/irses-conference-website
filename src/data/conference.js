@@ -297,6 +297,13 @@ export const conference = {
       members: [
         {
           name: "Tathagata Bandyopadhyay",
+          institute: "IEEE Region 10 Director",
+          image: "./assets/faculty/deepak_mathur.png",
+          infoLink: "https://yp.ieeer10.org/deepak-mathur/",
+         // bio: "Director General of Dhirubhai Ambani University with expertise in statistics, academic leadership, and higher education administration.",
+        },
+          {
+          name: "Deepak Mathur",
           institute: "Dhirubhai Ambani University ",
           image: "./assets/faculty/tathagata-bandyopadhyay.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/tathagata-bandyopadhyay",
@@ -339,6 +346,13 @@ export const conference = {
           image: "./assets/faculty/maniklal-das.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/maniklal-das",
           bio: "Professor at Dhirubhai Ambani University specializing in cyber security, privacy, cryptography, security protocols, and algorithms.",
+        },
+        {
+          name: "Rajendra Jadeja",
+          institute: "Marwadi University",
+          image: "./assets/faculty/rajendra_jadeja.jpeg",
+         // infoLink: "https://www.daiict.ac.in/faculty/maniklal-das",
+         // bio: "Professor at Dhirubhai Ambani University specializing in cyber security, privacy, cryptography, security protocols, and algorithms.",
         },
       ],
     },
