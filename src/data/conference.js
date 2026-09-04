@@ -455,7 +455,7 @@ export const conference = {
           infoLink: "https://www.daiict.ac.in/faculty/manish-kumar",
           bio: "Faculty member at Dhirubhai Ambani University working in UAV networks, sensor and ad-hoc networks, wireless-powered IoT, and 5G/6G systems.",
         },
-        {
+       {
           name: "Manish Chaturvedi",
           institute: "Dhirubhai Ambani University",
           image: "./assets/faculty/manish-chaturvedi.jpg",
