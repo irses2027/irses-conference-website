@@ -295,25 +295,13 @@ export const conference = {
     {
       title: "Chief Patron",
       members: [
-        {
+         {
           name: "Tathagata Bandyopadhyay",
-          institute: "IEEE Region 10 Director",
-          image: "./assets/faculty/deepak_mathur.png",
-          infoLink: "https://yp.ieeer10.org/deepak-mathur/",
-         // bio: "Director General of Dhirubhai Ambani University with expertise in statistics, academic leadership, and higher education administration.",
-        },
-          {
-          name: "Deepak Mathur",
           institute: "Dhirubhai Ambani University ",
           image: "./assets/faculty/tathagata-bandyopadhyay.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/tathagata-bandyopadhyay",
           bio: "Director General of Dhirubhai Ambani University with expertise in statistics, academic leadership, and higher education administration.",
         },
-      ],
-    },
-    {
-      title: "Patron",
-      members: [
         {
           name: "G. Venkatesh",
           institute: "Dhirubhai Ambani University ",
@@ -321,6 +309,21 @@ export const conference = {
           infoLink: "https://www.daiict.ac.in/faculty/g-venkatesh",
           bio: "Director of the School of Technology at Dhirubhai Ambani University with extensive academic, industry, and technology leadership experience.",
         },
+          
+      ],
+    },
+    {
+      title: "Patron",
+      members: [
+          {
+           name: "Deepak Mathur",
+          institute: "IEEE Region 10 Director",
+          image: "./assets/faculty/deepak_mathur.png",
+          infoLink: "https://yp.ieeer10.org/deepak-mathur/",
+         // bio: "Director General of Dhirubhai Ambani University with expertise in statistics, academic leadership, and higher education administration.",
+        },
+    
+       
       ],
     },
     {
