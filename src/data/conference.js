@@ -327,7 +327,7 @@ export const conference = {
       ],
     },
     {
-      title: "Oversight Committee",
+      title: "Advisory Committee",
       members: [
         {
           name: "Bhaskar Chaudhary",
@@ -349,6 +349,27 @@ export const conference = {
           image: "./assets/faculty/maniklal-das.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/maniklal-das",
           bio: "Professor at Dhirubhai Ambani University specializing in cyber security, privacy, cryptography, security protocols, and algorithms.",
+        },
+        {
+          name: "Sanjay Srivastava",
+          institute: "Dhirubhai Ambani University ",
+          image: "./assets/faculty/sanjay-srivastava.jpg",
+          infoLink: "https://www.daiict.ac.in/faculty/sanjay-srivastava",
+          bio: "Professor at Dhirubhai Ambani University with research interests in internet of things, protocol modeling and analysis, and simulation.",
+        },
+        {
+          name: "Anish Mathuria",
+          institute: "Dhirubhai Ambani University ",
+          image: "./assets/faculty/anish-mathuria.jpg",
+          infoLink: "https://www.daiict.ac.in/faculty/anish-mathuria",
+          bio: "Professor at Dhirubhai Ambani University specializing in network security, privacy-preserving computation, system security, and cryptography.",
+        },
+        {
+          name: "Biswajit Mishra",
+          institute: "Dhirubhai Ambani University ",
+          image: "./assets/faculty/biswajit-mishra.jpg",
+          infoLink: "https://www.daiict.ac.in/faculty/biswajit-mishra",
+          bio: "Faculty member at Dhirubhai Ambani University working in ultra-low-power circuits, VLSI design, power management, and energy-harvesting systems.",
         },
         {
           name: "Dr. Rajendra Jadeja",
@@ -389,32 +410,12 @@ export const conference = {
       title: "TPC Chairs",
       members: [
         {
-          name: "Sanjay Srivastava",
-          institute: "Dhirubhai Ambani University ",
-          image: "./assets/faculty/sanjay-srivastava.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/sanjay-srivastava",
-          bio: "Professor at Dhirubhai Ambani University with research interests in internet of things, protocol modeling and analysis, and simulation.",
-        },
-        {
-          name: "Anish Mathuria",
-          institute: "Dhirubhai Ambani University ",
-          image: "./assets/faculty/anish-mathuria.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/anish-mathuria",
-          bio: "Professor at Dhirubhai Ambani University specializing in network security, privacy-preserving computation, system security, and cryptography.",
-        },
-        {
           name: "Manish Chaturvedi",
           institute: "Dhirubhai Ambani University",
           image: "./assets/faculty/manish-chaturvedi.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
         },
-        {
-          name: "Biswajit Mishra",
-          institute: "Dhirubhai Ambani University ",
-          image: "./assets/faculty/biswajit-mishra.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/biswajit-mishra",
-          bio: "Faculty member at Dhirubhai Ambani University working in ultra-low-power circuits, VLSI design, power management, and energy-harvesting systems.",
-        },
+        
         {
           name: "Amit Ved",
           institute: "Marwadi University, Rajkot",
@@ -454,13 +455,6 @@ export const conference = {
           image: "./assets/faculty/manish-kumar.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/manish-kumar",
           bio: "Faculty member at Dhirubhai Ambani University working in UAV networks, sensor and ad-hoc networks, wireless-powered IoT, and 5G/6G systems.",
-        },
-       {
-          name: "Manish Chaturvedi",
-          institute: "Dhirubhai Ambani University",
-          image: "./assets/faculty/manish-chaturvedi.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
-         // bio: "Professor in the Department of Electrical Engineering at IIT Patna with expertise in semiconductor devices, microelectronics, VLSI, and device modeling.",
         },
       ],
     },
@@ -544,13 +538,6 @@ export const conference = {
       title: "Industry Track Chair",
       members: [
         {
-          name: "Ankit Vijayvargiya",
-          institute: "Dhirubhai Ambani University ",
-          image: "./assets/faculty/ankit-vijayvargiya.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/ankit-vijayvargiya",
-          bio: "Faculty member at Dhirubhai Ambani University with research interests in biomedical signals, machine learning, neural rehabilitation, and gait analysis.",
-        },
-        {
           name: "Amit Mankodi",
           institute: "Dhirubhai Ambani University ",
           image: "./assets/faculty/amit-mankodi.jpg",
@@ -568,13 +555,6 @@ export const conference = {
           image: "./assets/faculty/abhishek-jindal.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/abhishek-jindal",
           bio: "Associate Professor at Dhirubhai Ambani University with research interests in reinforcement learning, deep learning, wireless communication, and cyber-physical systems.",
-        },
-        {
-          name: "Ajay Beniwal",
-          institute: "Dhirubhai Ambani University ",
-          image: "./assets/faculty/ajay-beniwal.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/ajay-beniwal",
-          bio: "Assistant Professor at Dhirubhai Ambani University working in flexible and printable electronics, smart sensing, sensor materials, and sustainable electronics.",
         },
       ],
     },
