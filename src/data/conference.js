@@ -48,8 +48,8 @@ export const conference = {
       note: "Camera-ready paper and author registration details will be required.",
     },
     {
-     label: "Registration",
-     date: "1 December – 20 December 2026",
+      label: "Registration",
+      date: "1 December – 20 December 2026",
     },
     {
       label: "Conference dates",
@@ -295,7 +295,7 @@ export const conference = {
     {
       title: "Chief Patron",
       members: [
-         {
+        {
           name: "Tathagata Bandyopadhyay",
           institute: "Dhirubhai Ambani University ",
           image: "./assets/faculty/tathagata-bandyopadhyay.jpg",
@@ -309,21 +309,21 @@ export const conference = {
           infoLink: "https://www.daiict.ac.in/faculty/g-venkatesh",
           bio: "Director of the School of Technology at Dhirubhai Ambani University with extensive academic, industry, and technology leadership experience.",
         },
-          
+
       ],
     },
     {
       title: "Patron",
       members: [
-          {
-           name: "Deepak Mathur",
+        {
+          name: "Deepak Mathur",
           institute: "IEEE Region 10 Director",
           image: "./assets/faculty/deepak_mathur.png",
           infoLink: "https://yp.ieeer10.org/deepak-mathur/",
-         // bio: "Director General of Dhirubhai Ambani University with expertise in statistics, academic leadership, and higher education administration.",
+          // bio: "Director General of Dhirubhai Ambani University with expertise in statistics, academic leadership, and higher education administration.",
         },
-    
-       
+
+
       ],
     },
     {
@@ -375,8 +375,8 @@ export const conference = {
           name: "Dr. Rajendra Jadeja",
           institute: "Marwadi University",
           image: "./assets/faculty/rajendra_jadeja.jpeg",
-         // infoLink: "https://www.daiict.ac.in/faculty/maniklal-das",
-         // bio: "Professor at Dhirubhai Ambani University specializing in cyber security, privacy, cryptography, security protocols, and algorithms.",
+          // infoLink: "https://www.daiict.ac.in/faculty/maniklal-das",
+          // bio: "Professor at Dhirubhai Ambani University specializing in cyber security, privacy, cryptography, security protocols, and algorithms.",
         },
       ],
     },
@@ -415,7 +415,7 @@ export const conference = {
           image: "./assets/faculty/manish-chaturvedi.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
         },
-        
+
         {
           name: "Amit Ved", // to be track 3 chair
           institute: "Marwadi University, Rajkot",
@@ -671,11 +671,8 @@ export const conference = {
       ],
     },
   ],
-  registrationNote: "",
-  registrationFeeNotes: [
-    "Early-bird registration will be considered before 15 December 2026; late registration will be considered after 15 December 2026.",
-    "All registration fees are exclusive of GST. An additional 18% GST will be added at the time of payment.",
-  ],
+
+
   registrationFees: [
     {
       group: "IEEE Member",
@@ -810,13 +807,13 @@ export const conference = {
         amount: "Rs. 15,00,000/- + GST (18%)",
         details: [
           "Featured as the “Presented By” sponsor with visibility across PR campaigns, inaugural ceremony, social media promotions, main-stage acknowledgements, and a dedicated 10-minute presentation slot.",
-         // "Special mention as Presented by, inclusion in PR activities, inaugural ceremony presence, a 10-minute presentation slot, social media mentions, main-stage panel visibility, and podium acknowledgement.",
-         
-         "Sponsor name and logo will be prominently displayed across conference branding materials, including banners, posters, announcements, and proceedings. A high-resolution JPG logo must be submitted at the time of confirmation." ,
-         //"Sponsor name and logo will appear in conference announcement materials and documents, including banners, posters, and proceedings. Please provide a high-resolution JPG logo at the time of contract.",
-         
-         "A premium exhibition space of up to 5m × 5m will be allocated at the venue for product display and networking, along with ten complimentary delegate registrations.", 
-         //"Space up to 5m x 5m will be provided at a strategic location in the venue to showcase products. Ten complimentary registrations will be provided.",
+          // "Special mention as Presented by, inclusion in PR activities, inaugural ceremony presence, a 10-minute presentation slot, social media mentions, main-stage panel visibility, and podium acknowledgement.",
+
+          "Sponsor name and logo will be prominently displayed across conference branding materials, including banners, posters, announcements, and proceedings. A high-resolution JPG logo must be submitted at the time of confirmation.",
+          //"Sponsor name and logo will appear in conference announcement materials and documents, including banners, posters, and proceedings. Please provide a high-resolution JPG logo at the time of contract.",
+
+          "A premium exhibition space of up to 5m × 5m will be allocated at the venue for product display and networking, along with ten complimentary delegate registrations.",
+          //"Space up to 5m x 5m will be provided at a strategic location in the venue to showcase products. Ten complimentary registrations will be provided.",
         ],
       },
       {
@@ -825,10 +822,10 @@ export const conference = {
         details: [
           "Sponsor recognition through main-stage visibility, podium acknowledgements, inaugural ceremony presence, gala dinner invitations, social media promotions, and conference PR activities.",
           //"Main-stage panel visibility, podium acknowledgement, inaugural ceremony presence, gala dinner invite, social media mentions, and inclusion in PR activity.",
-          
+
           "Sponsor name and logo will be featured across official conference materials, including banners, posters, announcements, and proceedings. A high-resolution JPG logo must be provided upon confirmation.",
           //"Sponsor name and logo will appear in conference announcement materials and documents, including banners, posters, and proceedings. Please provide a high-resolution JPG logo at the time of contract.",
-          
+
           "A dedicated 4m × 4m exhibition space will be allocated at a prime venue location for product showcase and engagement. Sponsors will also be acknowledged during the inaugural or closing ceremony, along with five complimentary delegate registrations.",
           //"Space up to 4m x 4m will be provided at a strategic venue location to showcase products. Sponsors will be acknowledged during the inaugural welcome or closing event. Five complimentary registrations will be provided.",
         ],
@@ -839,10 +836,10 @@ export const conference = {
         details: [
           "Sponsor name and logo will be displayed across official conference promotional materials, including banners and posters.",
           //"Sponsor name and logo will appear in conference announcement materials, including banners and posters.",
-          
+
           "A dedicated 4m × 4m exhibition space will be provided at the venue for product showcasing and networking. Sponsors will also receive acknowledgement during the inaugural or closing ceremony.",
           //"Space up to 4m x 4m will be provided at the exhibition venue to showcase products. Sponsors will be acknowledged during the inaugural welcome or closing event.",
-          
+
           "Three complimentary delegate registrations will be included.",
           //"Three complimentary registrations will be provided.",
         ],
@@ -856,9 +853,9 @@ export const conference = {
 
           "A dedicated 3m × 3m exhibition space will be allocated at the venue for product display and engagement.",
           //"Space up to 3m x 3m will be provided at the exhibition venue to showcase products.",
-          
+
           "Two complimentary delegate registrations will be included.",
-        //  "Two complimentary registrations will be provided.",
+          //  "Two complimentary registrations will be provided.",
         ],
       },
       {
