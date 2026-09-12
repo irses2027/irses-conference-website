@@ -2038,6 +2038,17 @@ h4 {
   text-decoration-color: currentColor;
 }
 
+/* TPC Track label */
+.track-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary-blue);
+  margin-bottom: 2px;
+}
+
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Registration
 ───────────────────────────────────────────────────────────────────────────── */

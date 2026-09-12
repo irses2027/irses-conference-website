@@ -410,25 +410,37 @@ export const conference = {
       title: "TPC Chairs",
       members: [
         {
-          name: "Manish Chaturvedi", // to be track 1 chair
+          track: "Track 1",
+          name: "Manish Chaturvedi",
           institute: "Dhirubhai Ambani University",
           image: "./assets/faculty/manish-chaturvedi.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
         },
-
         {
-          name: "Amit Ved", // to be track 3 chair
+          track: "Track 2",
+          name: "Ankit Vijayvargiya",
+          institute: "Dhirubhai Ambani University",
+          image: "./assets/faculty/ankit-vijayvargiya.jpg",
+        },
+        {
+          track: "Track 3",
+          name: "Amit Ved",
           institute: "Marwadi University, Rajkot",
           image: "./assets/faculty/Amit-Ved.jpg",
           infoLink: "https://ieeegujaratsection.org/executive-committee/",
-          bio: "Electrical engineering academic at Marwadi University and IEEE Gujarat Section volunteer with interests in power systems, electrical machines, and engineering education.",
         },
         {
-          name: "Naran M. Pindoriya",  // to be track 4 chair 
+          track: "Track 4",
+          name: "Naran M. Pindoriya",
           institute: "Indian Institute of Technology Gandhinagar",
           image: "./assets/faculty/Naran-M-Pindoriya.jpg",
           infoLink: "https://iitgn.ac.in/faculty/ee/fac-naran",
-          //bio: "Electrical engineering academic at Marwadi University and IEEE Gujarat Section volunteer with interests in power systems, electrical machines, and engineering education.",
+        },
+        {
+          track: "Track 5",
+          name: "Ajay Beniwal",
+          institute: "Dhirubhai Ambani University",
+          image: "./assets/faculty/ajay-beniwal.jpg",
         },
       ],
     },
@@ -785,6 +797,26 @@ export const conference = {
     ],
     noShow:
       "Accepted papers are expected to be presented at the conference by at least one registered author. Non-presented papers may be excluded from submission to the digital library as per applicable no-show policy.",
+  },
+  travelGrant: {
+    intro:
+      "IRSES 2027 offers travel and accommodation support to eligible participants, as detailed below.",
+    categories: [
+      {
+        audience: "Students",
+        support: [
+          "Reimbursement of III-tier AC train fare for travel to and from the conference.",
+          "Accommodation during the conference.",
+        ],
+      },
+      {
+        audience: "Invited Speakers",
+        support: [
+          "Air ticket in economy class for travel to and from the conference.",
+          "Accommodation during the conference.",
+        ],
+      },
+    ],
   },
   sponsorship: {
     intro: [

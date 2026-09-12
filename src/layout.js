@@ -23,6 +23,7 @@ const NAV = [
   { id: "speakers", href: "speakers.html", label: "Speakers" },
   { id: "sponsors", href: "sponsors.html", label: "Sponsors" },
   { id: "venue", href: "venue.html", label: "Venue" },
+  { id: "travel-grant", href: "travel-grant.html", label: "Travel Grant" },
 ];
 
 /* Which page are we on? (body[data-page] wins, else the filename) */

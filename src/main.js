@@ -307,14 +307,24 @@ const committees = document.querySelector("[data-committees]");
 if (committees) {
   committees.innerHTML = conference.committees
     .map(
-      (group) => `
-    <article class="committee-card">
-      <h3>${html(group.title)}</h3>
-      <ul class="committee-members">
-        ${group.members.map(memberMarkup).join("")}
-      </ul>
-    </article>
-  `,
+      (group) => {
+        const isTPC = group.title === "TPC Chairs";
+        const membersHTML = isTPC
+          ? group.members.map((member) => `
+            ${member.track ? `<li class="track-label">${html(member.track)} Chair</li>` : ""}
+            ${memberMarkup(member)}
+          `).join("")
+          : group.members.map(memberMarkup).join("");
+
+        return `
+          <article class="committee-card${isTPC ? " tpc-card" : ""}">
+            <h3>${html(group.title)}</h3>
+            <ul class="committee-members">
+              ${membersHTML}
+            </ul>
+          </article>
+        `;
+      }
     )
     .join("");
 }
@@ -323,6 +333,25 @@ if (committees) {
 const sponsorshipSummary = document.querySelector("[data-sponsorship-summary]");
 if (sponsorshipSummary) {
   sponsorshipSummary.textContent = conference.sponsorship.intro[0];
+}
+
+/* ─── Travel Grant ────────────────────────────────────────────────────────── */
+const travelGrantIntro = document.querySelector("[data-travel-grant-intro]");
+if (travelGrantIntro) {
+  travelGrantIntro.textContent = conference.travelGrant.intro;
+}
+
+const travelGrantCategories = document.querySelector("[data-travel-grant-categories]");
+if (travelGrantCategories) {
+  travelGrantCategories.innerHTML = conference.travelGrant.categories
+    .map(
+      (c) => `
+      <article class="benefit-card">
+        <div class="benefit-card-top"><h3>${html(c.audience)}</h3></div>
+        <ul>${c.support.map((s) => `<li>${html(s)}</li>`).join("")}</ul>
+      </article>`,
+    )
+    .join("");
 }
 
 const sponsorshipIntro = document.querySelector("[data-sponsorship-intro]");
