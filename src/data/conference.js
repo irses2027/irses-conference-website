@@ -677,7 +677,7 @@ export const conference = {
       group: "IEEE Member",
       category: "Indian participant - IEEE student member",
       earlyBird: "₹6,000",
-      late: "₹7,000",
+      late: "₹8,000",
     },
     {
       group: "IEEE Women Member",
@@ -688,14 +688,14 @@ export const conference = {
     {
       group: "IEEE Member",
       category: "Indian participant - IEEE member",
-      earlyBird: "₹9,000",
-      late: "₹11,000",
+      earlyBird: "₹8,000",
+      late: "₹10,000",
     },
     {
       group: "IEEE Women Member",
       category: "Indian participant - IEEE women member",
-      earlyBird: "₹8,000",
-      late: "₹10,000",
+      earlyBird: "₹6,000",
+      late: "₹8,000",
     },
     {
       group: "IEEE Member",
@@ -724,14 +724,14 @@ export const conference = {
     {
       group: "Non-IEEE Member",
       category: "Indian participant - non-IEEE student member",
-      earlyBird: "₹7,000",
-      late: "₹8,500",
+      earlyBird: "₹8,000",
+      late: "₹10,000",
     },
     {
       group: "Non-IEEE Women Member",
       category: "Indian participant - non-IEEE student women member",
       earlyBird: "₹6,000",
-      late: "₹7,500",
+      late: "₹8,000",
     },
     {
       group: "Non-IEEE Member",
@@ -742,8 +742,8 @@ export const conference = {
     {
       group: "Non-IEEE Women Member",
       category: "Indian participant - non-IEEE women member",
-      earlyBird: "₹9,000",
-      late: "₹11,000",
+      earlyBird: "₹8,000",
+      late: "₹10,000",
     },
     {
       group: "Non-IEEE Member",
