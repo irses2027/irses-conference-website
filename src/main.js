@@ -487,12 +487,12 @@ const renderRegistrationFees = () => {
           return `
             <div class="pricing-row" role="row">
               <div class="pricing-membership" role="cell">${html(membership)}</div>
-              <div class="pricing-price" role="cell" data-label="Early Bird">
-                <span>Early Bird</span>
+              <div class="pricing-price" role="cell" data-label="Early Bird (Before 15th Dec)">
+                <span>Early Bird (Before 15th Dec)</span>
                 <strong>${html(fee.earlyBird)}</strong>
               </div>
-              <div class="pricing-price" role="cell" data-label="Late">
-                <span>Late</span>
+              <div class="pricing-price" role="cell" data-label="Late (After 15th Dec)">
+                <span>Late (After 15th Dec)</span>
                 <strong>${html(fee.late)}</strong>
               </div>
             </div>
@@ -511,8 +511,8 @@ const renderRegistrationFees = () => {
           </div>
           <div class="pricing-row pricing-row-head" role="row">
             <div role="columnheader">Membership</div>
-            <div role="columnheader">Early Bird</div>
-            <div role="columnheader">Late</div>
+            <div role="columnheader">Early Bird (Before 15th Dec)</div>
+            <div role="columnheader">Late (After 15th Dec)</div>
           </div>
           ${rows}
         </section>
@@ -543,6 +543,13 @@ currencyButtons.forEach((button) => {
 });
 
 renderRegistrationFees();
+
+const feeNotesList = document.querySelector("[data-fee-notes]");
+if (feeNotesList && conference.registrationFeeNotes?.length) {
+  feeNotesList.innerHTML = conference.registrationFeeNotes
+    .map((note) => `<li>${html(note)}</li>`)
+    .join("");
+}
 
 const authorNotes = document.querySelector("[data-author-notes]");
 if (authorNotes) {

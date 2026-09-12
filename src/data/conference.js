@@ -410,21 +410,21 @@ export const conference = {
       title: "TPC Chairs",
       members: [
         {
-          name: "Manish Chaturvedi",
+          name: "Manish Chaturvedi", // to be track 1 chair
           institute: "Dhirubhai Ambani University",
           image: "./assets/faculty/manish-chaturvedi.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
         },
         
         {
-          name: "Amit Ved",
+          name: "Amit Ved", // to be track 3 chair
           institute: "Marwadi University, Rajkot",
           image: "./assets/faculty/Amit-Ved.jpg",
           infoLink: "https://ieeegujaratsection.org/executive-committee/",
           bio: "Electrical engineering academic at Marwadi University and IEEE Gujarat Section volunteer with interests in power systems, electrical machines, and engineering education.",
         },
         {
-          name: "Naran M. Pindoriya",
+          name: "Naran M. Pindoriya",  // to be track 4 chair 
           institute: "Indian Institute of Technology Gandhinagar",
           image: "./assets/faculty/Naran-M-Pindoriya.jpg",
           infoLink: "https://iitgn.ac.in/faculty/ee/fac-naran",
@@ -672,6 +672,10 @@ export const conference = {
     },
   ],
   registrationNote: "",
+  registrationFeeNotes: [
+    "Early-bird registration will be considered before 15 December 2026; late registration will be considered after 15 December 2026.",
+    "All registration fees are exclusive of GST. An additional 18% GST will be added at the time of payment.",
+  ],
   registrationFees: [
     {
       group: "IEEE Member",
