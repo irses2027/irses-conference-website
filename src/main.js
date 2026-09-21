@@ -95,7 +95,10 @@ if (dates) {
         <span class="date-tile-step" aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
       </div>
       <p class="date-tile-label">${html(item.label)}</p>
-      <p class="date-tile-value">${html(item.date)}</p>
+      <p class="date-tile-value">
+  ${item.oldDate ? `<s>${html(item.oldDate)}</s><br>` : ""}
+  ${html(item.date)}
+</p>
     </article>`;
         if (item.link) {
           return `<a href="${item.link}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">${tile}</a>`;
