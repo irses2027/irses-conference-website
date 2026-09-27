@@ -34,6 +34,7 @@ export const conference = {
     },
     {
       label: "Paper submission deadline",
+      oldDate: "20 September 2026",
       date: "20 October 2026",
       note: "Extended from 20 September 2026. Authors should submit full papers before the deadline.",
     },
