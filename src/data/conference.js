@@ -379,6 +379,13 @@ export const conference = {
           // infoLink: "https://www.daiict.ac.in/faculty/maniklal-das",
           // bio: "Professor at Dhirubhai Ambani University specializing in cyber security, privacy, cryptography, security protocols, and algorithms.",
         },
+        {
+          name: "Dr. Upena Dalal",
+          institute: "Sardar Vallabhbhai National Institute of Technology, Surat",
+          image: "./assets/faculty/upena-dalal.jpg",
+          infoLink: "https://www.svnit.ac.in/web/department/Electronics/faculty.php",
+          bio: "Professor in the Department of Electronics Engineering at SVNIT Surat with research interests in wireless communication, 5G technology, optical wireless, and signal processing.",
+        },
       ],
     },
     {
@@ -429,6 +436,13 @@ export const conference = {
           institute: "Marwadi University, Rajkot",
           image: "./assets/faculty/Amit-Ved.jpg",
           infoLink: "https://ieeegujaratsection.org/executive-committee/",
+        },
+        {
+          track: "Track 3",
+          name: "Kalyan Sasidhar",
+          institute: "Dhirubhai Ambani University",
+          image: "./assets/faculty/Kalyan-Sasidhar.jpg",
+          infoLink: "https://www.daiict.ac.in/faculty/p-s-kalyan-sasidhar",
         },
         {
           track: "Track 4",
@@ -659,18 +673,18 @@ export const conference = {
         },
       ],
     },
-    {
-      title: "Technical Track Chairs",
-      members: [
-        {
-          name: "Kalyan Sasidhar",
-          institute: "Dhirubhai Ambani University ",
-          image: "./assets/faculty/Kalyan-Sasidhar.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/p-s-kalyan-sasidhar",
-          bio: "Faculty member at Dhirubhai Ambani University with research interests in mobile and pervasive computing, wireless sensor networks, and mobile phone sensing.",
-        },
-      ],
-    },
+//     {
+//       title: "Technical Track Chairs",
+//       members: [
+//         {
+//           name: "Kalyan Sasidhar",
+//           institute: "Dhirubhai Ambani University ",
+//           image: "./assets/faculty/Kalyan-Sasidhar.jpg",
+//           infoLink: "https://www.daiict.ac.in/faculty/p-s-kalyan-sasidhar",
+//           bio: "Faculty member at Dhirubhai Ambani University with research interests in mobile and pervasive computing, wireless sensor networks, and mobile phone sensing.",
+//         },
+//       ],
+//     },
     {
       title: "Sponsor Committee Chairs",
       members: [

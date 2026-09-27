@@ -67,43 +67,29 @@ if (logos) {
 //     .join("");
 // }
 
-const svgOpen = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">`;
-const timelineIcons = {
-  registration: `${svgOpen}<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>`,
-  upload: `${svgOpen}<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>`,
-  check: `${svgOpen}<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>`,
-  calendar: `${svgOpen}<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>`,
-};
-
-const pickTimelineIcon = (label = "") => {
-  const key = label.toLowerCase();
-  if (key.includes("regist")) return timelineIcons.registration;
-  if (key.includes("submission")) return timelineIcons.upload;
-  if (key.includes("accept")) return timelineIcons.check;
-  return timelineIcons.calendar;
-};
-
 const dates = document.querySelector("[data-important-dates]");
 if (dates) {
-  dates.innerHTML = conference.importantDates
-    .map(
-      (item, index) => {
-        const tile = `
-    <article class="date-tile">
-      <div class="date-tile-top">
-        <span class="date-tile-icon">${pickTimelineIcon(item.label)}</span>
-        <span class="date-tile-step" aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
-      </div>
-      <p class="date-tile-label">${html(item.label)}</p>
-      <p class="date-tile-value">${item.oldDate ? `<s>${html(item.oldDate)}</s><br>` : ""}${html(item.date)}</p>
-    </article>`;
-        if (item.link) {
-          return `<a href="${item.link}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">${tile}</a>`;
-        }
-        return tile;
-      },
-    )
+  const rows = conference.importantDates
+    .map((item) => {
+      const label = item.link
+        ? `<a href="${attr(item.link)}" target="_blank" rel="noopener noreferrer">${html(item.label)}</a>`
+        : html(item.label);
+      const note = item.note ? `<span class="dates-note">${html(item.note)}</span>` : "";
+      const value = item.oldDate
+        ? `<s class="dates-old">${html(item.oldDate)}</s><mark class="dates-new">${html(item.date)}</mark>`
+        : html(item.date);
+      return `
+      <tr${item.oldDate ? ' class="is-extended"' : ""}>
+        <th scope="row">${label}${note}</th>
+        <td>${value}</td>
+      </tr>`;
+    })
     .join("");
+  dates.innerHTML = `
+    <table class="dates-table">
+      <thead><tr><th scope="col">Event</th><th scope="col">Date</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
 }
 
 /* ─── Technical Tracks ─────────────────────────────────────────────────────── */
@@ -310,10 +296,18 @@ if (committees) {
       (group) => {
         const isTPC = group.title === "TPC Chairs";
         const membersHTML = isTPC
-          ? group.members.map((member) => `
-            ${member.track ? `<li class="track-label">${html(member.track)} Chair</li>` : ""}
+          ? group.members.map((member, index, all) => {
+            // One label per track; pluralise when a track has several chairs
+            const isFirstOfTrack = member.track && all[index - 1]?.track !== member.track;
+            const chairCount = all.filter((m) => m.track === member.track).length;
+            const label = isFirstOfTrack
+              ? `<li class="track-label">${html(member.track)} ${chairCount > 1 ? "Chairs" : "Chair"}</li>`
+              : "";
+            return `
+            ${label}
             ${memberMarkup(member)}
-          `).join("")
+          `;
+          }).join("")
           : group.members.map(memberMarkup).join("");
 
         return `
