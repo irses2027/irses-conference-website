@@ -35,7 +35,7 @@ export const conference = {
     {
       label: "Paper submission deadline",
       oldDate: "20 September 2026",
-      date: "20 October 2026",
+      date: "30 October 2026",
       note: "Extended from 20 September 2026. Authors should submit full papers before the deadline.",
     },
     {
@@ -673,18 +673,18 @@ export const conference = {
         },
       ],
     },
-//     {
-//       title: "Technical Track Chairs",
-//       members: [
-//         {
-//           name: "Kalyan Sasidhar",
-//           institute: "Dhirubhai Ambani University ",
-//           image: "./assets/faculty/Kalyan-Sasidhar.jpg",
-//           infoLink: "https://www.daiict.ac.in/faculty/p-s-kalyan-sasidhar",
-//           bio: "Faculty member at Dhirubhai Ambani University with research interests in mobile and pervasive computing, wireless sensor networks, and mobile phone sensing.",
-//         },
-//       ],
-//     },
+    //     {
+    //       title: "Technical Track Chairs",
+    //       members: [
+    //         {
+    //           name: "Kalyan Sasidhar",
+    //           institute: "Dhirubhai Ambani University ",
+    //           image: "./assets/faculty/Kalyan-Sasidhar.jpg",
+    //           infoLink: "https://www.daiict.ac.in/faculty/p-s-kalyan-sasidhar",
+    //           bio: "Faculty member at Dhirubhai Ambani University with research interests in mobile and pervasive computing, wireless sensor networks, and mobile phone sensing.",
+    //         },
+    //       ],
+    //     },
     {
       title: "Sponsor Committee Chairs",
       members: [
