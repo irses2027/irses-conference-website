@@ -334,7 +334,7 @@ export const conference = {
           name: "Akhlesh Lakhtakia",
           institute: "PennState University, USA",
           image: "./assets/faculty/Akhlesh-Lakhtakia.jpg",
-          infoLink: "",
+          infoLink: "https://www.esm.psu.edu/department/directory-detail-g.aspx?q=AXL4",
          // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
         },
          {
