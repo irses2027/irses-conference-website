@@ -331,6 +331,34 @@ export const conference = {
       title: "Advisory Committee",
       members: [
         {
+          name: "Akhlesh Lakhtakia",
+          institute: "PennState University, USA",
+          image: "./assets/faculty/Akhlesh-Lakhtakia.jpg",
+          infoLink: "",
+         // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
+        },
+        /*{
+          name: "",
+          institute: "",
+          image: "./assets/faculty/",
+          infoLink: "https://www.esm.psu.edu/department/directory-detail-g.aspx?q=AXL4",
+         bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
+        },*/
+        {
+          name: "Vihar Georgiev",
+          institute: "PennState University, USA",
+          image: "./assets/faculty/Vihar-Georgiev.jpg",
+          infoLink: "https://www.gla.ac.uk/schools/engineering/staff/vihargeorgiev/",
+         // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
+        },
+        {
+          name: "K.S. Chang-Liao",
+          institute: "National Tsing Hua University",
+          image: "./assets/faculty/Chang-Liao.jpeg",
+          infoLink: "https://nes.site.nthu.edu.tw/p/412-1356-10562.php?Lang=en",
+         //bio :
+        },
+        {
           name: "Bhaskar Chaudhary",
           institute: "Dhirubhai Ambani University ",
           image: "./assets/faculty/bhaskar-chaudhary.jpg",
