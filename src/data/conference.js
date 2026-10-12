@@ -330,6 +330,13 @@ export const conference = {
     {
       title: "Advisory Committee",
       members: [
+          {
+          name: "Akhlesh Lakhtakia",
+          institute: "PennState University, USA",
+          image: "./assets/faculty/Akhlesh-Lakhtakia.jpg",
+          infoLink: "",
+         // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
+        },
          {
           name: "Saptarshi Das",
           institute: "Penne State University, USA",
@@ -343,13 +350,6 @@ export const conference = {
           image: "./assets/faculty/syrakoulis-georgios.jpg",
           infoLink: "https://www.ee.duth.gr/en/instructor/sirakoulis-georgios/",
           bio: "",
-        },
-        {
-          name: "Akhlesh Lakhtakia",
-          institute: "PennState University, USA",
-          image: "./assets/faculty/Akhlesh-Lakhtakia.jpg",
-          infoLink: "",
-         // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
         },
         /*{
           name: "",
