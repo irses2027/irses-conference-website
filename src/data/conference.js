@@ -330,6 +330,20 @@ export const conference = {
     {
       title: "Advisory Committee",
       members: [
+         {
+          name: "Saptarshi Das",
+          institute: "Penne State University, USA",
+          image: "./assets/faculty/saptarshi-das.jpg",
+          infoLink: "https://www.matse.psu.edu/directory/saptarshi-das",
+          bio: "This faculty member is associated with the Penn State Intercollege Graduate Degree Program (IGDP) in Materials Science and Engineering (MatSE) where a multitude of perspectives and cross-disciplinary collaboration within research is highly valued. Graduate students in the IGDP in MatSE may work with faculty members from across Penn State.",
+         },
+         {
+          name: "Georgios Ch. Sirakoulis",
+          institute: "Democritus University of Thrace, Greece",
+          image: "./assets/faculty/syrakoulis-georgios.jpg",
+          infoLink: "https://www.ee.duth.gr/en/instructor/sirakoulis-georgios/",
+          bio: "",
+        },
         {
           name: "Akhlesh Lakhtakia",
           institute: "PennState University, USA",
