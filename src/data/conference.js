@@ -360,7 +360,7 @@ export const conference = {
         },*/
         {
           name: "Vihar Georgiev",
-          institute: "PennState University, USA",
+          institute: "University of Glasgow, UK",
           image: "./assets/faculty/Vihar-Georgiev.jpg",
           infoLink: "https://www.gla.ac.uk/schools/engineering/staff/vihargeorgiev/",
          // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
