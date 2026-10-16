@@ -338,7 +338,7 @@ export const conference = {
          // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
         },
          {
-          name: "Saptarshi Das",
+          name: "Saptarshi Das",  
           institute: "Penne State University, USA",
           image: "./assets/faculty/saptarshi-das.jpg",
           infoLink: "https://www.matse.psu.edu/directory/saptarshi-das",
