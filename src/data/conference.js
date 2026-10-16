@@ -23,7 +23,7 @@ export const conference = {
     },
     {
       name: "Smart Energy Learning Center",
-      src: "./assets/smart-energy-learning-center.jpg",
+      src: "./assets/smart-energy-learning-center.jpeg",
     },
   ],
   importantDates: [
