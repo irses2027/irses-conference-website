@@ -35,7 +35,8 @@ export const conference = {
     {
       label: "Paper submission deadline",
       oldDate: "20 September 2026",
-      date: "30 October 2026",
+      oldDate: "30 October 2026",
+      date: "10 November 2026",
       note: "Extended from 20 September 2026. Authors should submit full papers before the deadline.",
     },
     {
@@ -296,13 +297,6 @@ export const conference = {
     {
       title: "Chief Patron",
       members: [
-        {
-          name: "Tathagata Bandyopadhyay",
-          institute: "Dhirubhai Ambani University ",
-          image: "./assets/faculty/tathagata-bandyopadhyay.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/tathagata-bandyopadhyay",
-          bio: "Director General of Dhirubhai Ambani University with expertise in statistics, academic leadership, and higher education administration.",
-        },
         {
           name: "G. Venkatesh",
           institute: "Dhirubhai Ambani University ",
