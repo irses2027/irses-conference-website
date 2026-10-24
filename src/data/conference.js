@@ -345,6 +345,14 @@ export const conference = {
           infoLink: "https://www.ee.duth.gr/en/instructor/sirakoulis-georgios/",
           bio: "",
         },
+
+        {
+          name: "Deepak Shankar",
+          institute: "BSES, Delhi",
+          image: "./assets/faculty/deepak_shankar.jpg",
+          infoLink: "https://www.linkedin.com/in/deepak-shankar-33451172/?isSelfProfile=false",
+          bio: "",
+        },
         /*{
           name: "",
           institute: "",
