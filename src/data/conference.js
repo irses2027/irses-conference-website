@@ -376,7 +376,7 @@ export const conference = {
         },
         {
           name: "Shashi P. Karna",
-          institute: "DEVCOM Army Research Laboratory",
+          institute: "DEVCOM Army Research Laboratory, USA",
           image: "./assets/faculty/karna-sashi-personnel.jpg",
           infoLink: "https://www.mtu.edu/physics/department/adjunct-faculty/karna/",
          //bio :
