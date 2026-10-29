@@ -375,6 +375,13 @@ export const conference = {
          //bio :
         },
         {
+          name: "Shashi P. Karna",
+          institute: "DEVCOM Army Research Laboratory",
+          image: "./assets/faculty/karna-sashi-personnel",
+          infoLink: "https://www.mtu.edu/physics/department/adjunct-faculty/karna/",
+         //bio :
+        },
+        {
           name: "Bhaskar Chaudhary",
           institute: "Dhirubhai Ambani University ",
           image: "./assets/faculty/bhaskar-chaudhary.jpg",
