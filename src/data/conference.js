@@ -672,6 +672,13 @@ export const conference = {
           infoLink: "https://www.daiict.ac.in/faculty/arpit-rana",
           bio: "Faculty member at Dhirubhai Ambani University specializing in applied machine learning, recommender systems, multimodality, and digital innovation.",
         },
+        {
+          name: "Urvish Gajjar",
+          institute: "Sr Test Manager at Health care service corporation",
+          image: "./assets/faculty/Urvish-Gajjar.webp",
+          infoLink: "https://www.researchgate.net/profile/Urvish-Gajjar-3",
+         // bio: "Faculty member at Dhirubhai Ambani University with research interests in support vector machines, loss functions, regression, and extreme learning machines.",
+        },
       ],
     },
     {
