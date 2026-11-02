@@ -2975,6 +2975,10 @@ h4 {
    Responsive — 1180px (mobile menu breakpoint)
 ───────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 1180px) {
+  .classic-two-column {
+    grid-template-columns: 1fr;
+  }
+
   .nav-row {
     padding: 6px 16px;
   }
