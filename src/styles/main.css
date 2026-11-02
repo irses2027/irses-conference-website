@@ -3724,6 +3724,9 @@ body {
   color: var(--ink);
 }
 
+/* DEPRECATED — do not reuse. This placed a 2-column grid directly on a box,
+   so auto-placement scattered that box's direct children across the columns and
+   separated headings from their own lists. No page references it. See .cfp-panel. */
 .classic-two-column {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -6389,5 +6392,136 @@ a.nav-cta {
 
   .dates-table tbody td {
     white-space: normal;
+  }
+}
+/* ─────────────────────────────────────────────────────────────────────────────
+   Call for Papers — Submission Guidelines panel
+   Replaces the old `.classic-two-column` grid, which auto-placed the panel's
+   four direct children into a 2x2 grid and so split the "Submission Format"
+   heading away from its own list. Layout now flows: intro → spec → actions.
+───────────────────────────────────────────────────────────────────────────── */
+.cfp-panel {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.cfp-panel .cfp-intro {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* Section label sits directly above the spec table it describes. */
+.cfp-panel .cfp-spec-title {
+  margin: 0 0 -8px;
+  color: var(--component-primary-dark);
+  /* !important required: a global `h3 { font-size: ... !important }` rule
+     further up the sheet outranks plain selectors regardless of specificity. */
+  font-size: 0.78rem !important;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Label / value rows — mirrors the spec-row pattern used on the authors page. */
+.cfp-spec {
+  margin: 0;
+  border: 1px solid var(--component-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.cfp-spec-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) minmax(0, 1fr);
+  border-bottom: 1px solid var(--component-border);
+}
+
+.cfp-spec-row:last-child {
+  border-bottom: 0;
+}
+
+.cfp-spec-row dt,
+.cfp-spec-row dd {
+  margin: 0;
+  padding: 11px 14px;
+  line-height: 1.45;
+}
+
+.cfp-spec-row dt {
+  border-right: 1px solid var(--component-border);
+  background: var(--light-blue);
+  color: var(--component-primary-dark);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.cfp-spec-row dd {
+  color: var(--ink);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .cfp-spec-row dt {
+  color: #222222;
+}
+
+/* Primary call to action separated from the supporting links. */
+.cfp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  margin-top: 2px;
+  padding-top: 16px;
+  border-top: 1px solid var(--component-border);
+}
+
+.cfp-actions .cfp-action-primary {
+  padding: 9px 20px;
+  font-weight: 700;
+}
+
+.cfp-actions-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 760px) {
+  .cfp-panel {
+    gap: 16px;
+  }
+
+  .cfp-spec-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cfp-spec-row dt {
+    border-right: 0;
+    border-bottom: 1px solid var(--component-border);
+    padding-bottom: 8px;
+  }
+
+  .cfp-spec-row dd {
+    padding-top: 9px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cfp-actions,
+  .cfp-actions-secondary {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .cfp-actions .button {
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
