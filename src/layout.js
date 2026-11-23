@@ -1,4 +1,8 @@
+import { inject } from "@vercel/analytics";
 import { conference } from "./data/conference.js";
+
+/* Initialize Vercel Web Analytics */
+inject();
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Shared site chrome (header + footer) for the multi-page site.

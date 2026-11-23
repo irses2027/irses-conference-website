@@ -1,0 +1,21 @@
+{
+  "name": "irses-conference-website",
+  "version": "1.0.0",
+  "description": "IRSES 2027 — IEEE International Conference on Intelligent, Resilient, and Sustainable Energy Systems",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [
+    "conference",
+    "ieee",
+    "irses"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
