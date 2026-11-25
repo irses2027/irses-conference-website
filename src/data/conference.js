@@ -367,6 +367,12 @@ export const conference = {
           infoLink: "https://www.gla.ac.uk/schools/engineering/staff/vihargeorgiev/",
          // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
         },
+         {
+          name: "Anil K Roy",
+          institute: "Plaksha University",
+          image: "./assets/faculty/AKR.jpg",
+          infoLink: "https://plaksha.edu.in/faculty/anil-k-roy",
+        },
         {
           name: "K.S. Chang-Liao",
           institute: "National Tsing Hua University",
@@ -437,6 +443,13 @@ export const conference = {
           infoLink: "https://www.svnit.ac.in/web/department/Electronics/faculty.php",
           bio: "Professor in the Department of Electronics Engineering at SVNIT Surat with research interests in wireless communication, 5G technology, optical wireless, and signal processing.",
         },
+        {
+          name: "Rajeevan Chandel",
+          institute: "NIT Hamirpur",
+          image: "./assets/faculty/rajeevan.jpg",
+          infoLink: "https://www.researchgate.net/profile/Rajeevan-Chandel",
+         // bio: "Professor in the Department of Electronics Engineering at NIT Hamirpur with research interests in wireless communication, 5G technology, optical wireless, and signal processing.",
+        },
       ],
     },
     {
@@ -470,10 +483,10 @@ export const conference = {
       members: [
         {
           track: "Track 1",
-          name: "Manish Chaturvedi",
-          institute: "Dhirubhai Ambani University",
-          image: "./assets/faculty/manish-chaturvedi.jpg",
-          infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
+          name: "Dr. Manish Khare",
+          institute: "Allahabad Degree College",
+          image: "./assets/faculty/manish-khare.jpg",
+          infoLink: "https://sites.google.com/site/mkharejk/home?authuser=2",
         },
         {
           track: "Track 2",
@@ -503,10 +516,18 @@ export const conference = {
           infoLink: "https://iitgn.ac.in/faculty/ee/fac-naran",
         },
         {
-          track: "Track 5",
-          name: "Ajay Beniwal",
+          track: "Track 4",
+          name: "Sujay Kadam",
           institute: "Dhirubhai Ambani University",
-          image: "./assets/faculty/ajay-beniwal.jpg",
+          image: "./assets/faculty/sujay-kadam.jpg",
+          infoLink: "https://www.daiict.ac.in/faculty/sujay-kadam",
+        },
+        {
+          track: "Track 5",
+          name: "Rohit Dhiman",
+          institute: "Dhirubhai Ambani University",
+          image: "./assets/faculty/rohit-dhiman.jpg",
+          infoLink: "https://www.linkedin.com/in/rohitdhiman5/",
         },
       ],
     },
