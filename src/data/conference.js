@@ -483,6 +483,13 @@ export const conference = {
       members: [
         {
           track: "Track 1",
+          name: "Manish Chaturvedi",
+          institute: "Dhirubhai Ambani University",
+          image: "./assets/faculty/manish-chaturvedi.jpg",
+          infoLink: "https://www.daiict.ac.in/faculty/manish-chaturvedi",
+        },
+        {
+          track: "Track 1",
           name: "Dr. Manish Khare",
           institute: "Allahabad Degree College",
           image: "./assets/faculty/manish-khare.jpg",
@@ -524,8 +531,15 @@ export const conference = {
         },
         {
           track: "Track 5",
-          name: "Rohit Dhiman",
+          name: "Ajay Beniwal",
           institute: "Dhirubhai Ambani University",
+          image: "./assets/faculty/ajay-beniwal.jpg",
+          infoLink: "https://www.linkedin.com/in/ajaybeniwal/",
+        },
+        {
+          track: "Track 5",
+          name: "Rohit Dhiman",
+         // institute: "Dhirubhai Ambani University",
           image: "./assets/faculty/rohit-dhiman.jpg",
           infoLink: "https://www.linkedin.com/in/rohitdhiman5/",
         },
