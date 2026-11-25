@@ -347,6 +347,13 @@ export const conference = {
         },
 
         {
+          name: "Vihar Georgiev",
+          institute: "University of Glasgow, UK",
+          image: "./assets/faculty/Vihar-Georgiev.jpg",
+          infoLink: "https://www.gla.ac.uk/schools/engineering/staff/vihargeorgiev/",
+         // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
+        },
+        {
           name: "Deepak Shankar",
           institute: "BSES, Delhi",
           image: "./assets/faculty/deepak_shankar.jpg",
@@ -360,19 +367,6 @@ export const conference = {
           infoLink: "https://www.esm.psu.edu/department/directory-detail-g.aspx?q=AXL4",
          bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
         },*/
-        {
-          name: "Vihar Georgiev",
-          institute: "University of Glasgow, UK",
-          image: "./assets/faculty/Vihar-Georgiev.jpg",
-          infoLink: "https://www.gla.ac.uk/schools/engineering/staff/vihargeorgiev/",
-         // bio: "Professor at Dhirubhai Ambani University working in computational plasma physics, computational data science, high-performance computing, and AI/ML applications.",
-        },
-         {
-          name: "Anil K Roy",
-          institute: "Plaksha University",
-          image: "./assets/faculty/AKR.jpg",
-          infoLink: "https://plaksha.edu.in/faculty/anil-k-roy",
-        },
         {
           name: "K.S. Chang-Liao",
           institute: "National Tsing Hua University",
@@ -414,6 +408,12 @@ export const conference = {
           image: "./assets/faculty/sanjay-srivastava.jpg",
           infoLink: "https://www.daiict.ac.in/faculty/sanjay-srivastava",
           bio: "Professor at Dhirubhai Ambani University with research interests in internet of things, protocol modeling and analysis, and simulation.",
+        },
+        {
+          name: "Anil K Roy",
+          institute: "Plaksha University",
+          image: "./assets/faculty/AKR.jpg",
+          infoLink: "https://plaksha.edu.in/faculty/anil-k-roy",
         },
         {
           name: "Anish Mathuria",
