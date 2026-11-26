@@ -41,17 +41,17 @@ export const conference = {
     },
     {
       label: "Acceptance notification",
-      date: "30 November 2026",
+      date: "30 December 2026",
       note: "Accepted papers will proceed to final submission and registration.",
     },
     {
       label: "Final paper submission",
-      date: "20 December 2026",
+      date: "10 January 2027",
       note: "Camera-ready paper and author registration details will be required.",
     },
     {
       label: "Registration",
-      date: "1 December – 20 December 2026",
+      date: "1 January – 15 January 2027",
     },
     {
       label: "Conference dates",
