@@ -430,6 +430,13 @@ export const conference = {
           bio: "Faculty member at Dhirubhai Ambani University working in ultra-low-power circuits, VLSI design, power management, and energy-harvesting systems.",
         },
         {
+          name: "Gaurav Purohit",
+          institute: "CEERI Pilani",
+          image: "./assets/faculty/gaurav-purohit.jpg",
+          infoLink: "https://www.ceeri.res.in/faculty/gaurav-purohit",
+         // bio: "Faculty member at CEERI Pilani working in the field of electronics and communication engineering.",
+        },
+        {
           name: "Dr. Rajendra Jadeja",
           institute: "Marwadi University",
           image: "./assets/faculty/rajendra_jadeja.jpeg",
@@ -539,7 +546,7 @@ export const conference = {
         {
           track: "Track 5",
           name: "Rohit Dhiman",
-         // institute: "Dhirubhai Ambani University",
+          institute: "NIT Hamirpur",
           image: "./assets/faculty/rohit-dhiman.jpg",
           infoLink: "https://www.linkedin.com/in/rohitdhiman5/",
         },
